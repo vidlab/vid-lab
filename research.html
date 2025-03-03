@@ -35,6 +35,44 @@
     border-radius: 50px;
 }
 
+/* Style for the table */
+table {
+   width: 100%;
+   border-collapse: collapse; /* Collapses borders between cells */
+}
+
+
+/* Style for table cells */
+td {
+   border: 1px solid white; /* white border for each cell */
+   border-bottom: 1px solid #d3d3d3; /* Light grey color for the line */
+   padding: 20px;
+   text-align: justify; /* Justifies the text horizontally */
+}
+
+p {
+   text-align: justify; /* Justifies the text inside the paragraph */
+   margin: 0; /* Remove margin from the paragraph */
+}
+
+/* Optional: style for the table header */
+th {
+   border: 1px solid white;
+   padding: 20px;
+   text-align: justify;
+   background-color: #f2f2f2;
+}
+
+/* Set the first column (column 1) to 50% of the page width */
+td:nth-child(1), th:nth-child(1) {
+   width: 50%;
+}
+
+/* Optional: Place the last grey line from the last table row */
+tr:last-child td {
+   border-bottom: none; /* Remove the border from the last row */
+}
+
       </style>
    </head>
    <body>
@@ -84,16 +122,61 @@
 
 
          <hr>
+
+
+
          <div class="container-fluid">
             <div class="row-fluid marketing">
-
-
                <div class="span12">
+                  <h2>Research projects</h2>
 
-                  <h2>Welcome to Vision Intelligence and Data Lab</h2>
-                  <p style="font-size: 15px; color: gray;">
-                     Coming soon. 
-                  </p>
+
+                  <div class="table">
+                     <table>
+
+                        <tr>
+                           <td><p><b>Agricultural image semantic segmentation</b> is a pivotal component of modern agriculture, facilitating accurate visual 
+                              data analysis to improve crop management, optimize resource utilization, and boost overall productivity.
+                              This study proposes an efficient image segmentation method for precision agriculture, focusing on accurately delineating 
+                              farmland anomalies to support informed decision-making and proactive interventions.
+                              A <b> novel Dual Atrous Separable Convolution (DAS-Conv) module </b> is integrated within the DeepLabV3-based segmentation 
+                              framework. The DAS-Conv module is meticulously designed to achieve an <b>optimal balance between dilation rates and padding size</b>, 
+                              thereby enhancing model performance without compromising efficiency. 
+                              The study also incorporates a <b>strategic skip connection</b> from an optimal stage in the encoder to the decoder to bolster 
+                              the model’s capacity to capture fine-grained spatial features.
+                              Despite its lower computational complexity, the proposed model outperforms its baseline and achieves performance 
+                              comparable to highly complex transformer-based state-of-the-art (SOTA) models on the Agriculture-Vision benchmark dataset. 
+                              It achieves <b>more than 66% improvement in efficiency</b> when considering the trade-off between model complexity and performance, 
+                              compared to the SOTA model.</p></td>
+                           <td><img src="images\research_projects\DAS-Conv.png" alt="img-das_conv"></td>
+                        </tr>
+
+                        <tr>
+                           <td><p>
+                              Image segmentation is vital for numerous applications, including autonomous driving, agriculture, and medical imaging.
+                              A <b>lightweight model</b> is proposed, integrating <b>attention mechanisms</b> and <b>self-gated activation</b> to enhance pavement crack segmentation.
+                              The model outperforms existing solutions, achieving a <b>1.85% improvement in mean intersection over union (mIoU)</b>.
+                              The model demonstrates efficient per-sample inference time (237ms), making it suitable for real-time applications.
+                              This study aims an optimized architecture with an attention block and self-gated activation to improve pavement crack segmentation performance.
+                              It conducts extensive experiments on two benchmark datasets and systematically compares the proposed model with recent pavement detection methods. 
+                              Inconsistent lighting conditions on pavements can lead to varying contrast levels, affecting the accuracy of crack detection.
+                              The model needs to handle large-scale pavement areas.
+                             
+
+                              </p></td>
+                           <td><img src="images\research_projects\pavement crack segmentation for smart highway infrasturcture management.png" alt="img-pavement_crack"></td>
+                        </tr>
+
+                        <tr>
+                           <td><p>A brain tumor: an <b>abnormal growth of tissue</b>, which is found to be unchecked by the normal cell-cycle control mechanism. 
+                              Early detection of brain tumors is imperative for <b>enhancing patient care, tailoring treatment strategies, and saving lives</b>. 
+                              Manual segmentation requires a high level of expertise and is time-consuming. This study proposes a <b>graph attention</b>
+                              (GAT)-based model by exploiting multichannel (FLAIR, T1CE, T1, and T2) MRI modalities for brain tumor segmentation.</p></td>
+                           <td><img src="images\research_projects\a graph attention network for automatic brain tumar segmentation.png" alt="img-brain tumar seg "></td>
+                        </tr>
+                     </table>
+                  </div>
+
                   <br/>
                </div>
             </div>
