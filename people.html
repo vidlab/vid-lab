@@ -35,12 +35,69 @@
     border-radius: 50px;
 }
 
+
+/* Style for the table */
+table {
+   width: 100%;
+   /* border-collapse: collapse; Collapses borders between cells */
+}
+
+
+
+
+/* Style for table cells */
+td {
+   border: 1px solid white; /* white border for each cell */
+   border-bottom: 1px solid #eeeded; /* Light grey color for the line */
+   padding: 10px;
+   text-align: justify; /* Justifies the text horizontally */
+}
+
+p {
+   text-align: justify; /* Justifies the text inside the paragraph */
+   margin: 0; /* Remove margin from the paragraph */
+}
+
+/* Optional: style for the table header
+th {
+   border: 1px solid white;
+   padding: 50px;
+   text-align: justify;
+   background-color: #f2f2f2;
+} */
+
+
+
+/* Optional: Place the last grey line from the last table row */
+tr:last-child td {
+   border-bottom: 1px solid #eeeded; /* Remove the border from the last row */
+}
+
+
 /* Apply justification to the entire body */
 body {
     text-align: justify;
 }
 
+
+.profile-img {
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         border: 1px solid rgb(200, 200, 200);
+         margin-right: 10px;
+         /* margin-top: 10px; */
+         object-fit: cover;
+      }
+
+      .student-name {
+         color: #0088cc;
+      }
+
+
       </style>
+
+
    </head>
    <body>
       <div class="container">
@@ -222,95 +279,75 @@ body {
                   </div>
 
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Chee Mei Ling (Irene)</a>
-                        </h4>
-                        MSc. in Electrical and Computer Engineering. <br>
-                        Topic: Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern Analysis.
-                     </div>
-                  </div>
-                  <hr>
+                  <table border="1">
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Fahim Rahman</a>
-                        </h4>
-                        MSc. in Electrical and Computer Engineering.
-                     </div>
-                  </div>
-                  <hr>
+                     <tr>
+                        <td><img src="images\people\Chee Mei Ling.jpg" alt="Chee Mei Ling (Irene)" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; margin-top:10px; object-fit: cover;" ></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Chee Mei Ling (Irene)</h4>
+                           MSc. in Electrical and Computer Engineering. <br>
+                           Topic: Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern Analysis.
+                        </td>
+                     </tr>   
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Gaeul Han</a>
-                        </h4>
-                        MSc. in Electrical and Computer Engineering.
-                     </div>
-                  </div>
-                  <hr>
+                     <tr>
+                        <td><img src="images\people\Fahim Ur Rahman.jpg" alt="Fahim Rahman" style="width:200px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px;  object-fit: cover;"></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Fahim Ur Rahman</h4>
+                           MSc. in Electrical and Computer Engineering. <br>
+                           Topic: Lightweight Point Cloud Network for Real-Time 3D Object Detection.
+                        </td>
+                     </tr>  
+                     
+                     <tr>
+                        <td><img src="images\people\Gaeul Han.jpeg" alt="Gaeul Han" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px;  object-fit: cover;"></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Gaeul Han</h4>
+                           MSc. in Electrical and Computer Engineering.
+                        </td>
+                     </tr>  
+                     
+                     <tr>
+                        <td><img src="images\people\Harish Sundaralingam.jpg" alt="Harish Sundaralingam" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Harish Sundaralingam</h4>
+                           MSc. in Electrical and Computer Engineering. <br>
+                           Topic: Enhancing Object Detection in Complex Scenes: A Semantic Segmentation-aware Framework with Attention-Gating for Improved Small Object Detection.
+                        </td>
+                     </tr>  
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Harish Sundaralingam</a>
-                        </h4>
-                        MSc. in Electrical and Computer Engineering. <br>
-                        Topic: Enhancing Object Detection in Complex Scenes: A Semantic Segmentation-aware Framework with Attention-Gating for Improved Small Object Detection
-                     </div>
-                  </div>
-                  <hr>
+                     <tr>
+                        <td><img src="images\3.jpg" alt="Jimmy Tsang" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Jimmy Tsang</h4>
+                           MSc. in Electrical and Computer Engineering. <br>
+                           Topic: Medical Image Analysis.
+                        </td>
+                     </tr>  
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Jimmy Tsang</a>
-                        </h4>
-                        
-                        MSc. in Electrical and Computer Engineering. <br>
-                        Topic: Medical Image Analysis.
-                     </div>
-                  </div>
-                  <hr>
+                     <tr>
+                        <td><img src="images\3.jpg" alt="Russell Frost" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Russell Frost</h4>
+                           MSc. in Electrical and Computer Engineering. <br>
+                           Topic: Automated Music Transcription.
+                        </td>
+                     </tr>  
 
-                  <!-- <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Pajeeza Batool</a>
-                        </h4>
-                        
-                        MSc. in Electrical and Computer Engineering. <br>
-                     </div>
-                  </div>
-                  <hr> -->
+                     <tr>
+                        <td><img src="images\people\Tharrengini Suresh.jpg" alt="Tharrengini Suresh" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
+                        <td>
+                           <h4 style="color: #0088cc;">Tharrengini Suresh</h4>
+                           MSc. in Electrical and Computer Engineering. <br>
+                           Topic: Semantic Segmentation with Edge-Context Enrichment and Attention Strategies: A Refined
+                           Framework for Improved Performance in Complex Visual Environments.
+                        </td>
+                     </tr>  
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Russell Frost</a>
-                        </h4>
-                        
-                        MSc. in Electrical and Computer Engineering. <br>
-                        Topic: Automated Music Transcription
-                     </div>
-                  </div>
-                  <hr>
 
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4>
-                           <a href="#">Tharrengini Suresh</a>
-                        </h4>
-                        MSc. in Electrical and Computer Engineering. <br>
-                        Topic: Semantic Segmentation with Edge-Context Enrichment and Attention Strategies: A Refined
-                        Framework for Improved Performance in Complex Visual Environments
-                     </div>
-                  </div>
-                  <hr>
-                  
+                  </table>
+
+                
                </section>
        
 
