@@ -37,7 +37,7 @@ body {
 .navbar .nav li a {
 	font-weight: bold;
 	text-align: center;
-	color: rgba(1, 39, 73, 1) !important; /* Change text color to blue */
+	color: #012749 !important; /* Change text color to blue */
 	border-left: 1px solid rgba(255, 255, 255, .75);
 	border-right: 1px solid rgba(0, 0, 0, .1);
 }
