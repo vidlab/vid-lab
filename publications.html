@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="all-class-padding">
+  <!-- PAGE LOADER: runs until window.load, then disappears -->
+  <div id="pageLoader">
+    <div class="loader-bars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+
+      <div class="logo-container navbar-brand">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/favicon.png" alt="Favicon" class="logo-img" style="width: 23px; height: 23px;">
+        </div>
+        <div class="logo-text-wrapper">
+          <a href="index.html" class="logo-link">VIDLab</a>
+        </div>
+      </div>
+
+      <!-- Bootstrap toggler (hidden on mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Custom hamburger menu (shown on mobile) -->
+      <button class="custom-hamburger" id="customHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="people.html">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="researchs.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Overlay for mobile menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+
+  <section class="py-5 text-center all-header-main">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Publications</h2>
+      <p class="lead">Discover our latest research contributions and scientific publications.</p>
+    </div>
+  </section>
+
+  <section id="publications" class="container div_items_max_width py-4">
+    <div class="filter-options col-12 col-md-10 mx-auto rounded">
+      <div class="custom-dropdown" data-filter="year">
+        <div class="custom-dropdown-toggle" tabindex="0">Year</div>
+        <div class="custom-dropdown-menu">
+        </div>
+      </div>
+
+      <div class="custom-dropdown" data-filter="type">
+        <div class="custom-dropdown-toggle" tabindex="0">Type</div>
+        <div class="custom-dropdown-menu">
+        </div>
+      </div>
+
+      <div class="custom-dropdown" data-filter="keyword">
+        <div class="custom-dropdown-toggle" tabindex="0">Keyword</div>
+        <div class="custom-dropdown-menu">
+        </div>
+      </div>
+
+      <button id="resetFilters" class="btn btn-outline-secondary">Reset Filters</button>
+      <a href="publications_bibbase.html" class="btn btn-light bibbase-vidual-button">Bibbase</a>
+    </div>
+
+
+    <div class="d-flex flex-column align-items-center" id="publicationsList">
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2025" data-type="Preprints"
+          data-keywords="Segmentation">
+          <p>
+            <strong>Self-Supervised Learning For Image Segmentation: A Comprehensive Survey.</strong><br>
+            T Akilan, N Jahan, W Zhang<br>
+            arXiv preprint arXiv:2505.13584, 2025.<br>
+            <a href="https://arxiv.org/abs/2505.13584" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2025" data-type="Conferences"
+          data-keywords="Deep-Learning, Detection">
+          <p>
+            <strong>An Analysis Of Yolovx Deep-Learning Models For Colon Cancer Detection.</strong><br>
+            TP Raseena, AK Soni, J Kumar, T Akilan, AK Singh<br>
+            Procedia Computer Science 260, 81-90, 2025.<br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1877050925009172"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2025" data-type="Conferences"
+          data-keywords="Segmentation, Attention">
+          <p>
+            <strong>Ecaseg: Enhancing Semantic Segmentation With Edge Context And Attention Strategy.</strong><br>
+            T Suresh, H Sundaralingam, T Akilan, N Jahan<br>
+            Procedia Computer Science 260, 274-282, 2025.<br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1877050925009469"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2025" data-type="Preprints"
+          data-keywords="Deep-Learning">
+          <p>
+            <strong>Benchmarking Deep-Learning Models On Nvidia Jetson Nano For Real-Time Systems: An Empirical
+              Investigation.</strong><br>
+            TP Swaminathan, C Silver, T Akilan, J Kumar<br>
+            In arXiv preprint arXiv:2406.17749, 2024.<br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1877050925010178"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2025" data-type="Conferences"
+          data-keywords="Segmentation, Attention">
+          <p>
+            <strong>Segattndetec: A Segmentation-Aware Attention-Based Object Detector.</strong><br>
+            H Sundaralingam, T Suresh, T Akilan<br>
+            Procedia Computer Science 260, 914-922, 2025.<br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S187705092501018X"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Journals"
+          data-keywords="Transfer-Learning">
+          <p>
+            <strong>Fast Transfer-Learning Method Using Random Layer Freezing And Feature Refinement
+              Strategy.</strong><br>
+            W Zhang, Y Yang, T Akilan, QMJ Wu, T Liu<br>
+            In IEEE Transactions on Cybernetics, 2024. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10738831/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Conferences"
+          data-keywords="Segmentation, Attention">
+          <p>
+            <strong>Improved Semi-Supervised Attention Gan For Semantic Segmentation.</strong><br>
+            N Jahan, T Akilan, TM Nguyen<br>
+            In 2024 IEEE Pacific Rim Conference on Communications, Computers and Signal Processing (PACRIM), 1--6, 2024.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10690208/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Conferences"
+          data-keywords="Segmentation, Attention">
+          <p>
+            <strong>Improving Pavement Crack Segmentation Using Attention Mechanism And Self-Gated
+              Activation.</strong><br>
+            N Jahan, T Akilan, T Suresh<br>
+            In 2024 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 853--858, 2024. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10667187/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>Phasor-Driven Acceleration For Fft-Based Cnns.</strong><br>
+            E Reis, T Akilan, M Khalid<br>
+            In arXiv preprint arXiv:2406.00290, 2024.<br>
+            <a href="https://arxiv.org/pdf/2406.00290" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Conferences"
+          data-keywords="Ensemble">
+          <p>
+            <strong>Ensemble-Based Robust Model For Accurate Driving Range Estimation Of Evs Leveraging Big
+              Data.</strong><br>
+            S Hosseini, A Yassine, T Akilan<br>
+            In 2024 IEEE 8th Energy Conference (ENERGYCON), 1--6, 2024. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10488792/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Conferences"
+          data-keywords="Ensemble">
+          <p>
+            <strong>Cascaded Ensemble-Based Short-Term Load Forecasting For Smart Energy Management.</strong><br>
+            J Ottens, T Akilan, A Ameli, MN Uddin<br>
+            In 2024 IEEE Texas Power and Energy Conference (TPEC), 1--6, 2024. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10472180/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Conferences"
+          data-keywords="Regression">
+          <p>
+            <strong>Advanced Deep Regression Models For Oil Production Forecast.</strong><br>
+            S Hosseini, T Akilan, B Rafiq<br>
+            In the 37th Canadian Conference on Artificial Intelligence, 2024.<br>
+            <a href="https://assets.pubpub.org/uou6wlls/Hosseini-51716777093088.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2024" data-type="Preprints"
+          data-keywords="Detection">
+          <p>
+            <strong>Tf-66: A Robust Dataset For Thermal Imaging-Based Fall Detection And Eldercare.</strong><br>
+            C Silver, T Akilan<br>
+            This is a preprint, not formally published in a conference or journal yet.<br>
+            <a href="https://d197for5662m48.cloudfront.net/documents/publicationstatus/230922/preprint_pdf/328cccafe66976ce6b58e4d9dd69e272.pdf"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Conferences"
+          data-keywords="CNN, Detection, Ensemble">
+          <p>
+            <strong>A Novel Approach For Fall Detection Using Thermal Imaging And A Stacking Ensemble Of Autoencoder And
+              3D-Cnn Models.</strong><br>
+            C Silver, T Akilan<br>
+            In 2023 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 71--76, 2023.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10288941/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Conferences"
+          data-keywords="CNN, Classification">
+          <p>
+            <strong>An Efficient Cnn-Bilstm-Based Model For Multi-Class Intracranial Hemorrhage
+              Classification.</strong><br>
+            K Genereux, T Akilan<br>
+            In 2023 8th International Conference on Image, Vision and Computing (ICIVC), 303--309, 2023. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10269914/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Preprints"
+          data-keywords="Regression">
+          <p>
+            <strong>Advanced Deep Regression Models For Forecasting Time Series Oil Production.</strong><br>
+            S Hosseini, T Akilan<br>
+            arXiv preprint arXiv:2308.16105<br>
+            <a href="https://arxiv.org/pdf/2308.16105" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Conferences"
+          data-keywords="Detection, Classification">
+          <p>
+            <strong>Nlp-Driven Content Classification Towards Fake News And Bully Detection.</strong><br>
+            DG Sarkale, VJ Gabani, W Zhang, T Akilan<br>
+            In 2023 IEEE International Conference on Artificial Intelligence, Blockchain, and Internet of Things
+            (AIBThings), 1--5, 2023.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10292460/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Conferences"
+          data-keywords="Segmentation, Attention">
+          <p>
+            <strong>Multi-Class Brain Tumor Segmentation Using Graph Attention Network.</strong><br>
+            D Patel, D Patel, R Saxena, T Akilan<br>
+            In 8th International Conference on Signal and Image Processing (ICSIP), 196--201, 2023.<br>
+            <a href="https://arxiv.org/pdf/2302.05598" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Conferences"
+          data-keywords="Detection">
+          <p>
+            <strong>Dual-Modality Deep Feature-Based Anomaly Detection For Video Surveillance.</strong><br>
+            PL Bhatt, D Shah, WZ C. Silver, T Akilan<br>
+            In 2023 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 60--64, 2023.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10288767/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Conferences"
+          data-keywords="CNN">
+          <p>
+            <strong>Federated Learning-Assisted Self-Supervised Cnn For Monkeypox Diagnosis.</strong><br>
+            N Jahan, G Bajwa, T Akilan<br>
+            In 2023 IEEE Western New York Image and Signal Processing Workshop (WNYISPW), 1--5, 2023. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10349384/"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Preprints"
+          data-keywords="Detection">
+          <p>
+            <strong>Low-Light Pedestrian Detection In Visible And Infrared Image Feeds: Issues And
+              Challenges.</strong><br>
+            H Vachhani, T Akilan, Y Devmurari, N Shaik, D Patel<br>
+            In arXiv preprint arXiv:2311.08557, 2023.<br>
+            <a href="https://arxiv.org/pdf/2311.08557" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Detection">
+          <p>
+            <strong>Intelligent Real-Time Face-Mask Detection System With Hardware Acceleration For Covid-19
+              Mitigation.</strong><br>
+            P Sertic, A Alahmar, T Akilan, M Javorac, Y Gupta<br>
+            In Healthcare, 873, 2022. MDPI.<br>
+            <a href="https://www.mdpi.com/2227-9032/10/5/873" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Machine Learning For Global Food Security: A Concise Overview.</strong><br>
+            N Jahan, T Akilan, AR Phalke<br>
+            In 2022 IEEE International Humanitarian Technology Conference (IHTC), 63--68, 2022. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9998400/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Detection">
+          <p>
+            <strong>A Lightweight Convolutional Neural Network With Representation Self-Challenge For Fingerprint
+              Liveness
+              Detection..</strong><br>
+            J Chen, C Yuan, C Cui, Z Xia, X Sun<br>
+            In Computers, Materials \& Continua, 2022.<br>
+            <a href="https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=15462218&AN=157064757&h=SYq%2FvVkLOLi%2B9zeaVctgw1bBlZcmETATI3NL1H8vLbNEtf19gAd0UDtZnyJ8XZFoT9JjRkenMHM6X%2F1J1TKuUg%3D%3D&crl=c"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Deep Neural Network Modeling For Accurate Electric Motor Temperature Prediction.</strong><br>
+            S Hosseini, A Shahbandegan, T Akilan<br>
+            In 2022 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 170--175, 2022. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9918222/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Preprints"
+          data-keywords="Attention">
+          <p>
+            <strong>Global Attention-Based Encoder-Decoder Lstm Model For Temperature Prediction Of Permanent Magnet
+              Synchronous Motors.</strong><br>
+            J Li, T Akilan<br>
+            In arXiv preprint arXiv:2208.00293, 2022.<br>
+            <a href="https://arxiv.org/pdf/2208.00293" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>Anova-Based Automatic Attribute Selection And A Predictive Model For Heart Disease
+              Prognosis.</strong><br>
+            MNR Chowdhury, W Zhang, T Akilan<br>
+            In arXiv preprint arXiv:2208.00296, 2022.<br>
+            <a href="https://arxiv.org/pdf/2208.00296" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Classification">
+          <p>
+            <strong>Accurate Flow Regime Classification And Void Fraction Measurement In Two-Phase Flowmeters Using
+              Frequency-Domain Feature Extraction And Neural Networks.</strong><br>
+            S Hosseini, AM Iliyasu, T Akilan, AS Salama, E Eftekhari-Zadeh, K Hirota<br>
+            In Separations, 160, 2022. MDPI.<br>
+            <a href="https://www.mdpi.com/2297-8739/9/7/160" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Detection">
+          <p>
+            <strong>Intelligent Real-Time Face-Mask Detection System With Hardware Acceleration For Covid-19 Mitigation.
+              Healthcare 2022, 10, 873.</strong><br>
+            P Sertic, A Alahmar, T Akilan, M Javorac, Y Gupta<br>
+            MDPI stays neutral with regard to jurisdictional claims in published maps and institutional
+            affil-iations.<br>
+            <a href="https://www.academia.edu/download/89608470/healthcare-10-00873.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2021" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>A Hybrid Learner For Simultaneous Localization And Mapping.</strong><br>
+            T Akilan, E Johnson, J Sandhu, R Chadha, G Taluja<br>
+            In arXiv preprint arXiv:2101.01158, 2021.<br>
+            <a href="https://arxiv.org/abs/2101.01158" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2023" data-type="Preprints"
+          data-keywords="Detection">
+          <p>
+            <strong>Low-Light Pedestrian Detection In Visible And Infrared Image Feeds: Issues And
+              Challenges.</strong><br>
+            H Vachhani, T Akilan, Y Devmurari, N Shaik, D Patel<br>
+            In arXiv preprint arXiv:2311.08557, 2023.<br>
+            <a href="https://arxiv.org/pdf/2311.08557" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Detection">
+          <p>
+            <strong>Intelligent Real-Time Face-Mask Detection System With Hardware Acceleration For Covid-19
+              Mitigation.</strong><br>
+            P Sertic, A Alahmar, T Akilan, M Javorac, Y Gupta<br>
+            In Healthcare, 873, 2022. MDPI.<br>
+            <a href="https://www.mdpi.com/2227-9032/10/5/873" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Machine Learning For Global Food Security: A Concise Overview.</strong><br>
+            N Jahan, T Akilan, AR Phalke<br>
+            In 2022 IEEE International Humanitarian Technology Conference (IHTC), 63--68, 2022. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9998400/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Detection">
+          <p>
+            <strong>A Lightweight Convolutional Neural Network With Representation Self-Challenge For Fingerprint
+              Liveness
+              Detection..</strong><br>
+            J Chen, C Yuan, C Cui, Z Xia, X Sun<br>
+            In Computers, Materials \& Continua, 2022.<br>
+            <a href="https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=15462218&AN=157064757&h=SYq%2FvVkLOLi%2B9zeaVctgw1bBlZcmETATI3NL1H8vLbNEtf19gAd0UDtZnyJ8XZFoT9JjRkenMHM6X%2F1J1TKuUg%3D%3D&crl=c"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Deep Neural Network Modeling For Accurate Electric Motor Temperature Prediction.</strong><br>
+            S Hosseini, A Shahbandegan, T Akilan<br>
+            In 2022 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 170--175, 2022. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9918222/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Preprints"
+          data-keywords="Attention">
+          <p>
+            <strong>Global Attention-Based Encoder-Decoder Lstm Model For Temperature Prediction Of Permanent Magnet
+              Synchronous Motors.</strong><br>
+            J Li, T Akilan<br>
+            In arXiv preprint arXiv:2208.00293, 2022.<br>
+            <a href="https://arxiv.org/pdf/2208.00293" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>Anova-Based Automatic Attribute Selection And A Predictive Model For Heart Disease
+              Prognosis.</strong><br>
+            MNR Chowdhury, W Zhang, T Akilan<br>
+            In arXiv preprint arXiv:2208.00296, 2022.<br>
+            <a href="https://arxiv.org/pdf/2208.00296" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Classification">
+          <p>
+            <strong>Accurate Flow Regime Classification And Void Fraction Measurement In Two-Phase Flowmeters Using
+              Frequency-Domain Feature Extraction And Neural Networks.</strong><br>
+            S Hosseini, AM Iliyasu, T Akilan, AS Salama, E Eftekhari-Zadeh, K Hirota<br>
+            In Separations, 160, 2022. MDPI.<br>
+            <a href="https://www.mdpi.com/2297-8739/9/7/160" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2022" data-type="Journals"
+          data-keywords="Detection">
+          <p>
+            <strong>Intelligent Real-Time Face-Mask Detection System With Hardware Acceleration For Covid-19 Mitigation.
+              Healthcare 2022, 10, 873.</strong><br>
+            P Sertic, A Alahmar, T Akilan, M Javorac, Y Gupta<br>
+            MDPI stays neutral with regard to jurisdictional claims in published maps and institutional
+            affil-iations.<br>
+            <a href="https://www.academia.edu/download/89608470/healthcare-10-00873.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2021" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>A Hybrid Learner For Simultaneous Localization And Mapping.</strong><br>
+            T Akilan, E Johnson, J Sandhu, R Chadha, G Taluja<br>
+            In arXiv preprint arXiv:2101.01158, 2021.<br>
+            <a href="https://arxiv.org/abs/2101.01158" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2021" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>2021 Index Ieee Transactions On Neural Networks And Learning Systems Vol. 32.</strong><br>
+            A Abbas, M Abbasi, MM Abdelsamea, A Abusorrah, E Adeli, RK Agarwal, ...<br>
+            In IEEE Transactions on Neural Networks and Learning Systems, 2021.<br>
+            <a href="https://ieeexplore.ieee.org/iel7/5962385/9629429/09645284.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2021" data-type="Conferences"
+          data-keywords="Segmentation">
+          <p>
+            <strong>Multi-Channel Mri Embedding: An Effective Strategy For Enhancing Brain Tumor
+              Segmentation.</strong><br>
+            A Pandya, C Samuel, N Patel, V Patel, T Akilan<br>
+            In 2021 IEEE Applied Imagery Pattern Recognition Workshop (AIPR), 1--8, 2021. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9762150/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2021" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>2021 Index Ieee Transactions On Industrial Informatics Vol. 17.</strong><br>
+            J Abawajy, A Abdalla, M Abdel-Basset, M Abdel-Nasser, A Abdollahi, ...<br>
+            In IEEE Transactions on Industrial Informatics, 2021.<br>
+            <a href="https://ieeexplore.ieee.org/iel7/9424/9523447/09669105.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Preprints"
+          data-keywords="Segmentation">
+          <p>
+            <strong>Multi-Channel Mri Embedding: An Effectivestrategy For Enhancement Of Human Brain Wholetumor
+              Segmentation.</strong><br>
+            A Pandya, C Samuel, N Patel, V Patel, T Akilan<br>
+            In arXiv preprint arXiv:2009.06115, 2020.<br>
+            <a href="https://arxiv.org/abs/2009.06115" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Journals"
+          data-keywords="Classification">
+          <p>
+            <strong>A Width-Growth Model With Subnetwork Nodes And Refinement Structure For Representation Learning And
+              Image Classification.</strong><br>
+            W Zhang, QMJ Wu, Y Yang, T Akilan, H Zhang<br>
+            In IEEE Transactions on Industrial Informatics, 1562--1572, 2020. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9050859/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Multimodality Weight And Score Fusion For Slam.</strong><br>
+            T Akilan, E Johnson, G Taluja, J Sandhu, R Chadha<br>
+            In 2020 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 1--4, 2020. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9255714/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Es2Isl: An Advancement In Speech To Sign Language Translation Using 3D Avatar Animator.</strong><br>
+            BD Patel, HB Patel, MA Khanvilkar, NR Patel, T Akilan<br>
+            In 2020 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 1--5, 2020. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9255783/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>Multimodel Feature Reinforcement Framework Using Moore–Penrose Inverse For Big Data
+              Analysis.</strong><br>
+            W Zhang, QMJ Wu, Y Yang, T Akilan<br>
+            In IEEE Transactions on Neural Networks and Learning Systems, 5008--5021, 2020. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9214865/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Quantifying The Impact Of Complementary Visual And Textual Cues Under Image Captioning.</strong><br>
+            T Akilan, A Thiagarajan, B Venkatesan, S Thirumeni, SG Chandrasekaran<br>
+            In 2020 IEEE International Conference on Systems, Man, and Cybernetics (SMC), 389--394, 2020. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9283183/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Conferences"
+          data-keywords="Detection, Classification">
+          <p>
+            <strong>Fast Detection Of Duplicate Bug Reports Using Lda-Based Topic Modeling And
+              Classification.</strong><br>
+            T Akilan, D Shah, N Patel, R Mehta<br>
+            In 2020 IEEE International Conference on Systems, Man, and Cybernetics (SMC), 1622--1629, 2020. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9283289/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2020" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>2020 Index Ieee Transactions On Intelligent Transportation Systems Vol. 21.</strong><br>
+            MA Abdel-Aty, A Abdel-Rahim, S Abdulla, NF Abdullah, ...<br>
+            In IEEE Transactions on Intelligent Transportation Systems, 2020.<br>
+            <a href="https://ieeexplore.ieee.org/iel7/6979/9272385/09313841.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2019" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>2019 Index Ieee Transactions On Vehicular Technology Vol. 68.</strong><br>
+            MA Abd-Elmagid, MF Abdel-Hafez, A Abdel-Rahim, A Abdelaziz, ...<br>
+            In IEEE Transactions on Vehicular Technology, 2019.<br>
+            <a href="https://ieeexplore.ieee.org/iel7/25/8935346/08967323.pdf"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2019" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>2019 Index Ieee Transactions On Computer-Aided Design Of Integrated Circuits And Systems Vol.
+              38.</strong><br>
+            I Abdomerovic, A Afzali-Kusha, V Agarwal, EC Ahn, S Ahn, A Ain, T Akilan, ...<br>
+            In IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2019.<br>
+            <a href="https://scholar.archive.org/work/b52yz5y5bjb6dhi5yv3ubi326e/access/wayback/https://ieeexplore.ieee.org/ielx7/43/8907512/09031603.pdf"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2019" data-type="Journals"
+          data-keywords="CNN">
+          <p>
+            <strong>Sendec: An Improved Image To Image Cnn For Foreground Localization.</strong><br>
+            T Akilan, QMJ Wu<br>
+            In IEEE Transactions on Intelligent Transportation Systems, 4435--4443, 2019. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8854330/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2019" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>Video Foreground Extraction Using Multi-View Receptive Field And Encoder–Decoder Dcnn For Traffic
+              And
+              Surveillance Applications.</strong><br>
+            T Akilan, QMJ Wu, W Zhang<br>
+            In IEEE Transactions on Vehicular Technology, 9478--9493, 2019. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8809739/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2019" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>Recomputation Of The Dense Layers For Performance Improvement Of Dcnn.</strong><br>
+            Y Yang, QMJ Wu, X Feng, T Akilan<br>
+            In IEEE transactions on pattern analysis and machine intelligence, 2912--2925, 2019. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8718406/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2019" data-type="Journals"
+          data-keywords="CNN, Segmentation">
+          <p>
+            <strong>A 3D Cnn-Lstm-Based Image-To-Image Foreground Segmentation.</strong><br>
+            T Akilan, QJ Wu, A Safaei, J Huo, Y Yang<br>
+            In IEEE Transactions on Intelligent Transportation Systems, 959--971, 2019. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8671459/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>Fusion-Based Foreground Enhancement For Background Subtraction Using Multivariate Multi-Model
+              Gaussian
+              Distribution.</strong><br>
+            T Akilan, QMJ Wu, Y Yang<br>
+            In Information Sciences, 414--431, 2018. Elsevier.<br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0020025516320539"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Thesis"
+          data-keywords="Deep-Learning">
+          <p>
+            <strong>Video Foreground Localization From Traditional Methods To Deep-Learning.</strong><br>
+            T Akilan<br>
+            University of Windsor (Canada)<br>
+            <a href="https://search.proquest.com/openview/fee34e8c5dfc5a0194ae7088c8aa8d94/1?pq-origsite=gscholar&cbl=18750"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>A Foreground Inference Network For Video Surveillance Using Multi-View Receptive Field.</strong><br>
+            T Akilan<br>
+            In arXiv preprint arXiv:1801.06593, 2018.<br>
+            <a href="https://arxiv.org/pdf/1801.06593" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Conferences"
+          data-keywords="Deep-Learning, Detection">
+          <p>
+            <strong>New Trend In Video Foreground Detection Using Deep-Learning.</strong><br>
+            T Akilan, QMJ Wu, J Wei, S Amin, H Jie<br>
+            In 2018 IEEE 61St international midwest symposium on circuits and systems (MWSCAS), 889--892, 2018.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8623825/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Journals"
+          data-keywords="Classification">
+          <p>
+            <strong>Effect Of Fusing Features From Multiple Dcnn Architectures In Image Classification.</strong><br>
+            T Akilan, QJ Wu, H Zhang<br>
+            In IET Image Processing, 1102--1110, 2018. The Institution of Engineering and Technology.<br>
+            <a href="https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/iet-ipr.2017.0232"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>Non-Iterative Recomputation Of Dense Layers For Performance Improvement Of Dcnn.</strong><br>
+            Y Yang, QM Wu, X Feng, T Akilan<br>
+            In arXiv preprint arXiv:1809.05606, 2018.<br>
+            <a href="https://arxiv.org/pdf/1809.05606" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Journals"
+          data-keywords="Other">
+          <p>
+            <strong>System-On-A-Chip (Soc)-Based Hardware Acceleration For An Online Sequential Extreme Learning Machine
+              (Os-Elm).</strong><br>
+            A Safaei, QMJ Wu, T Akilan, Y Yang<br>
+            In IEEE transactions on computer-aided design of integrated circuits and systems, 2127--2138, 2018.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8509179/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2018" data-type="Conferences"
+          data-keywords="CNN">
+          <p>
+            <strong>Double Encoding - Slow Decoding Image To Image Cnn For Foreground Identification With Application
+              Towards Intelligent Transportation.</strong><br>
+            T Akilan, QMJ Wu<br>
+            In 2018 IEEE International Conference on Internet of Things (iThings) and IEEE Green Computing and
+            Communications (GreenCom) and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data
+            (SmartData), 395--403, 2018. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8726771/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2017" data-type="Conferences"
+          data-keywords="CNN">
+          <p>
+            <strong>A Late Fusion Approach For Harnessing Multi-Cnn Model High-Level Features.</strong><br>
+            T Akilan, QMJ Wu, A Safaei, W Jiang<br>
+            In 2017 IEEE International Conference on Systems, Man, and Cybernetics (SMC), 566--571, 2017. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8122666/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2017" data-type="Conferences"
+          data-keywords="Classification, Transfer-Learning">
+          <p>
+            <strong>Fusion Of Transfer-Learning Features And Its Application In Image Classification.</strong><br>
+            T Akilan, QMJ Wu, Y Yang, A Safaei<br>
+            In 2017 IEEE 30th Canadian Conference on Electrical and Computer Engineering (CCECE), 1--5, 2017. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/7946733/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2017" data-type="Conferences"
+          data-keywords="CNN">
+          <p>
+            <strong>A Feature Embedding Strategy For High-Level Cnn Representations From Multiple Convnets.</strong><br>
+            T Akilan, QMJ Wu<br>
+            2017 IEEE Global Conference on Signal and Information Processing (GlobalSIP)<br>
+            <a href="https://ieeexplore.ieee.org/document/8309150" class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2017" data-type="Conferences"
+          data-keywords="Detection">
+          <p>
+            <strong>System-On-Chip-Based Hardware Acceleration For Human Detection In 2D/3D Scenes.</strong><br>
+            A Safaei, QMJ Wu, T Akilan<br>
+            In 2017 IEEE International Conference on Systems, Man, and Cybernetics (SMC), 1041--1045, 2017. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8122748/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2017" data-type="Conferences"
+          data-keywords="CNN">
+          <p>
+            <strong>A Feature Embedding Strategy For High-Level Cnn Representations From Multiple Convnets.</strong><br>
+            T Akilan, QMJ Wu, W Jiang<br>
+            In 2017 IEEE Global Conference on Signal and Information Processing (GlobalSIP), 1195--1199, 2017. IEEE.<br>
+            <a href="https://arxiv.org/pdf/1705.04301" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2017" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>System-On-A-Chip (Soc)-Based Hardware Acceleration For Extreme Learning Machine.</strong><br>
+            A Safaei, QMJ Wu, Y Yang, T Akılan<br>
+            In 2017 24th IEEE international conference on electronics, circuits and systems (ICECS), 470--473, 2017.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/8292050/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2016" data-type="Conferences"
+          data-keywords="Detection">
+          <p>
+            <strong>A Unified Threshold Updating Strategy For Multivariate Gaussian Mixture Based Moving Object
+              Detection.</strong><br>
+            A Thangarajah, QMJ Wu, J Huo<br>
+            In 2016 International Conference on High Performance Computing \& Simulation (HPCS), 570--574, 2016.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/7568386/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2015" data-type="Conferences"
+          data-keywords="Segmentation">
+          <p>
+            <strong>Label Fusion For Multi-Atlas Segmentation Based.</strong><br>
+            A Thangarajah<br>
+            In Image Analysis and Recognition: 12th International Conference, ICIAR 2015, Niagara Falls, ON, Canada,
+            July
+            22-24, 2015, Proceedings, 100, 2015. Springer.<br>
+            <a href="https://books.google.com/books?hl=en&lr=&id=_bEYCgAAQBAJ&oi=fnd&pg=PA100&dq=info:0M15k_dSRT8J:scholar.google.com&ots=JM8nPzPXfL&sig=MjgI0CTm87_ofsOB7u334D9kZ7c"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2015" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Design Of Full Adder/Subtractor Using Irreversible Ig-A Gate.</strong><br>
+            AK Chowdhury, DYW Tan, SLB Yew, GLC Wyai, B Madon, A Thangarajah<br>
+            In 2015 International Conference on Computer, Communications, and Control Technology (I4CT), 103--107, 2015.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/7219546/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2015" data-type="Preprints"
+          data-keywords="Other">
+          <p>
+            <strong>Implementation Of Auto Monitoring And Short-Message-Service System Via Gsm Modem.</strong><br>
+            A Thangarajah, B Wongkaew, M Ekpanyapong<br>
+            In arXiv preprint arXiv:1501.01548, 2015.<br>
+            <a href="https://arxiv.org/abs/1501.01548" class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2015" data-type="Conferences"
+          data-keywords="Segmentation">
+          <p>
+            <strong>Label Fusion For Multi-Atlas Segmentation Based On Majority Voting.</strong><br>
+            J Huo, G Wang, QMJ Wu, A Thangarajah<br>
+            In Image Analysis and Recognition: 12th International Conference, ICIAR 2015, Niagara Falls, ON, Canada,
+            July
+            22-24, 2015, Proceedings 12, 100--106, 2015. Springer International Publishing.<br>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-319-20801-5_11"
+              class="btn btn-outline-secondary border">View
+              Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2015" data-type="Conferences"
+          data-keywords="Detection">
+          <p>
+            <strong>Video Foreground Detection In Non-Static Background Using Multi-Dimensional Color
+              Space.</strong><br>
+            A Thangarajah, QMJ Wu, AK Singh, B Mandon, AK Chowdhury<br>
+            In Procedia Computer Science, 55--61, 2015. Elsevier.<br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1877050915031944/pdf?md5=95ee5520367f02d45079a33d06daed76&pid=1-s2.0-S1877050915031944-main.pdf&_valck=1"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2015" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Vision-Based Registration For Augmented Reality-A Short Survey.</strong><br>
+            A Thangarajah, J Wu, B Madon, AK Chowdhury<br>
+            In 2015 IEEE international conference on signal and image processing applications (ICSIPA), 463--468, 2015.
+            IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/7412236/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2013" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Design Of 20-Ghz Low Noise Amplifier For Automotive Collision Avoidance Application.</strong><br>
+            A Thangarajah, HM Hsu, M Ekpanyapong, C Punyasai, YT Chou, NC Liu<br>
+            In 2013 International SoC Design Conference (ISOCC), 119--122, 2013. IEEE.<br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/6864001/"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="publication-entry border rounded p-3 mb-3" data-year="2011" data-type="Conferences"
+          data-keywords="Other">
+          <p>
+            <strong>Fpga Implementation Of Hermite-Rodriguez Functions For Uwb Systems.</strong><br>
+            A Thangarajah, MA Yusoff<br>
+            In IEEE TENCON, 2011.<br>
+            <a href="https://www.researchgate.net/profile/Thangarajah-Akilan/publication/316680436_FPGA_Implementation_of_Hermite-Rodriguez_Functions_for_UWB_Systems/links/5ac876664585151e80a5607c/FPGA-Implementation-of-Hermite-Rodriguez-Functions-for-UWB-Systems.pdf"
+              class="btn btn-outline-secondary border">View Paper</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-light pt-3 ">
+    <div class="container">
+
+      <!-- Desktop/tablet footer: visible from md and up -->
+      <div class="row text-center footer_element_height d-none d-md-flex">
+        <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+          <h6 class="fw-bold">Vision Intelligence and Data Lab</h6>
+          <p>Advancing intelligent systems through cutting-edge research in computer vision, data analytics, machine
+            learning, and AI to address real-world challenges with practical, impactful technological solutions.</p>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/lablogo.png" alt="Logo" class="img-fluid footer-logo">
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center justify-content-center  text-center">
+          <h6 class="fw-bold">Address</h6>
+          <p>Vision Intelligence and Data Lab<br>
+            Lakehead University<br>
+            Thunder Bay, Ontario, Canada<br>
+            Monday to Friday (8.00AM - 5.00PM)<br>
+            <a href="https://www.google.com/maps/search/Lakehead+University,+Thunder+Bay,+Ontario,+Canada/@48.424393,-89.2591852,14z"
+              class="text-info text-decoration-none">Location</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Mobile-only footer: visible below md -->
+      <div class="row d-flex d-md-none text-center justify-content-center">
+        <div class="col-12 d-flex flex-column align-items-center text-center">
+          <h6 class="fw-bold">Vision Intelligence and Data Lab</h6>
+          <p>
+            Lakehead University<br>
+            Thunder Bay, Ontario, Canada<br>
+            Monday to Friday (8.00AM - 5.00PM)<br>
+            <a href="https://www.google.com/maps/search/Lakehead+University,+Thunder+Bay,+Ontario,+Canada/@48.424393,-89.2591852,14z"
+              class="text-info text-decoration-none">Location</a>
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-secondary">
+      <!-- Desktop/tablet footer: visible from md and up -->
+      <div class="text-center pb-3 d-none d-md-block">
+        <small>© 2025 Vision Intelligence and Data Lab. All rights reserved.</small>
+      </div>
+
+      <!-- Mobile-only footer: visible below md -->
+      <div class="text-center pb-3 d-block d-md-none">
+        <small>© 2025 VIDLab. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,529 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>Vision Intelligence and Data Lab - Home</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Research Lab, Home, Velit Aliquet Sagittis University">
-      <meta name="author" content="">
-      <!-- Le styles -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
-      
-      <!-- Open Graph Image for Google and Social Media -->
-      <meta property="og:image" content="https://vidlab.github.io/vid-lab/favicon.png">      
-      
-      <link rel="icon" href="favicon.png" type="image/png">
-      <link rel="shortcut icon" href="favicon.png" type="image/png">
 
-<style type="text/css">
-#headline {
-   width: 100%;
-    height: 224px;
-    /*background: linear-gradient(45deg, #30393C 0%, #000000 100%) repeat;*/
-    display: table;
-}
-#headertext {
-    text-align: left;
-}
-#headertext,
-#logo {
-    display: table-cell;
-    padding-left: 50px;
-    vertical-align: middle;
-}
-#fakeImg {
-    width: 100px;
-    height: 100px;    
-    background: blue;
-    float: middle;
-    border-radius: 50px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
+<body class="all-class-padding">
+  <!-- PAGE LOADER: runs until window.load, then disappears -->
+  <div id="pageLoader">
+    <div class="loader-bars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-/* Style for the table */
-table {
-   width: 100%;
-   /* border-collapse: collapse; Collapses borders between cells */
-}
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
 
+      <div class="logo-container navbar-brand">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/favicon.png" alt="Favicon" class="logo-img" style="width: 23px; height: 23px;">
+        </div>
+        <div class="logo-text-wrapper">
+          <a href="index.html" class="logo-link">VIDLab</a>
+        </div>
+      </div>
 
+      <!-- Bootstrap toggler (hidden on mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <!-- Custom hamburger menu (shown on mobile) -->
+      <button class="custom-hamburger" id="customHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-/* Style for table cells */
-td {
-   border: 1px solid white; /* white border for each cell */
-   border-bottom: 1px solid #eeeded; /* Light grey color for the line */
-   padding: 10px;
-   text-align: justify; /* Justifies the text horizontally */
-}
-
-p {
-   text-align: justify; /* Justifies the text inside the paragraph */
-   margin: 0; /* Remove margin from the paragraph */
-}
-
-/* Optional: style for the table header
-th {
-   border: 1px solid white;
-   padding: 50px;
-   text-align: justify;
-   background-color: #f2f2f2;
-} */
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="people.html">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="researchs.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
+  <!-- Overlay for mobile menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
 
-/* Optional: Place the last grey line from the last table row */
-tr:last-child td {
-   border-bottom: 1px solid #eeeded; /* Remove the border from the last row */
-}
-
-
-/* Apply justification to the entire body */
-body {
-    text-align: justify;
-}
-
-
-.profile-img {
-         width: 100px;
-         height: 100px;
-         border-radius: 50%;
-         border: 1px solid rgb(200, 200, 200);
-         margin-right: 10px;
-         /* margin-top: 10px; */
-         object-fit: cover;
-      }
-
-      .student-name {
-         color: #0088cc;
-      }
+  <!-- Header -->
+  <section class="py-5 text-center all-header-main">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Our Team</h2>
+      <p class="lead">Meet the brilliant minds driving research at Vision Intelligence and Data Lab.</p>
+    </div>
+  </section>
 
 
-      </style>
+  <!-- Floating Nav -->
+  <!-- Desktop Filter Bar (only shows on Desktop) -->
+  <div id="floating-nav" class="floating-nav text-center d-none d-md-flex">
+    <a href="#faculty" class="nav-link active">Faculty</a>
+    <a href="#alumni" class="nav-link">Alumni</a>
+    <a href="#graduate" class="nav-link">Graduate Students</a>
+    <a href="#undergraduate" class="nav-link">Undergraduate Students</a>
+  </div>
 
+  <!-- Mobile Filter Bar (only shows on mobile) -->
+  <div class="mobile-filter-bar d-flex d-md-none">
+    <div class="mobile-filter-tabs">
+      <button class="mobile-filter-btn active" data-filter="faculty">Faculty</button>
+      <button class="mobile-filter-btn" data-filter="alumni">Alumni</button>
+      <button class="mobile-filter-btn" data-filter="graduate">Graduate Students</button>
+      <button class="mobile-filter-btn" data-filter="undergraduate">Undergraduate Students</button>
+    </div>
+  </div>
 
-   </head>
-   <body>
-      <div class="container">
-         <header class="jumbotron subhead" id="overview">
-<!--             <p class="lead">Lakehead University </p> -->
-
-            <div id="headline jumbotron">
-             
-             <div id="logo">
-                 <!-- <div id="fakeImg"></div> -->
-                 <img id="fakeImg" src="./lablogo.png" width="32" height="32">
-             </div>
-             <div id="headertext">
-                <h1>Vision Intelligence and Data Lab</h1>
-             </div>
-           </div>
-
-
-            <!-- <div class="row">
-               <div class="col-md-5">
-                  <img src="./lablogo.png" width="32" height="32">
-               </div>
-               <div class="col-md-7">
-                  <h1>Vision Intelligence and Data Lab</h1>
-               </div>
-            </div> -->
-         </header>
-
-
-         <div class="masthead">
-            <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="people.html">People</a></li>
-                        <li><a href="research.html">Research projects</a></li>
-                        <li><a href="publication.html">Publications</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                     </ul>
-                  </div>
-               </div>
+  <!-- Faculty -->
+  <section id="faculty" class="container py-4">
+    <h2 class="text-center mb-4">Faculty</h2>
+    <div class="row justify-content-center">
+      <div class="card card-hover shadow-hover people-card-row">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <img src="assets/images/team/akilan_pp_w_bg.png" class="img-fluid rounded-start" alt="Faculty">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Akilan, T. (Ph.D., P.Eng., SMIEEE)</h5>
+              <p class="card-text">
+                <strong>Associate Professor</strong><br>
+                <strong>Department:</strong> Software Engineering, Lakehead University<br>
+                <i class="fa-solid fa-envelope"></i> takilan@lakeheadu.ca<br>
+                <i class="fa-solid fa-location-dot"></i> ATAC5014<br>
+                <strong>Office Hours:</strong> By appointment<br>
+                <a href="https://www.lakeheadu.ca/users/A/takilan"
+                  class="text-info text-decoration-none btn btn-light border">Academic Profile</a>
+                <a href="https://scholar.google.ca/citations?hl=en&user=d7VHPp4AAAAJ"
+                  class="text-info text-decoration-none btn btn-light border">Google Scholar</a>
+              </p>
             </div>
-         </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-         <hr>
+  <!-- Alumni -->
+  <section id="alumni" class="students-info-section container pb-5">
+    <h2 class="text-center mb-4">Alumni</h2>
+
+    <!-- Alumni Card -->
+    <div class="card card-hover shadow-hover students-info-section-card">
+      <div class="row g-0 mb-4 pb-4 border-bottom students-info-first-card people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Christ Silver.png" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Christopher Silver</h5>
+            <p class="card-text">
+              <b></b>MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Development of an Advanced Thermal Imaging based Human Fall Detection System.
+              <a href="https://www.lakeheadu.ca/alumni/journey/magazine/winter-2024/articles/node/202470"
+                class="text-info text-decoration-none">[read more]</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Harish Sundaralingam2.jpg" class="img-fluid rounded-start"
+            alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Harish Sundaralingam</h5>
+            <p class="card-text">
+              MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Enhancing Object Detection in Complex Scenes: A Semantic Segmentation-aware
+              Framework with Attention-Gating for Improved Small Object Detection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/dummy DP.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Kevin Genereux</h5>
+            <p class="card-text">
+              MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Deep Learning-based Intracranial Hemorrhage Segmentation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/dummy DP.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Mohammad Arshi-Saloot</h5>
+            <p class="card-text">
+              Postdoc<br>
+              <strong>Topic:</strong> Advanced Automation System for Human Capital Hiring and Retention.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Nusrat Jahan2.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Nusrat Jahan</h5>
+            <p class="card-text">
+              MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> An Improved Semi-Supervised Learning Framework for Image Semantic Segmentation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/dummy DP.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Siavash Hosseini</h5>
+            <p class="card-text">
+              MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Regression Modelling for Industrial Applications.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Tharrengini Suresh.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Tharrengini Suresh</h5>
+            <p class="card-text">
+              MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Semantic Segmentation with Edge-Context Enrichment and Attention Strategies: A
+              Refined Framework for Improved Performance in Complex Visual Environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Graduate Students -->
+  <section id="graduate" class="students-info-section container pb-5">
+    <h2 class="text-center mb-4">Graduate Students</h2>
+    <div class="card card-hover shadow-hover students-info-section-card">
+
+      <div class="row g-0 mb-4 pb-4 border-bottom students-info-first-card people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Chee Mei Ling.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Chee Mei Ling (Irene)</h5>
+            <p class="card-text">
+              <b></b>MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern
+              Analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Fahim Ur Rahman.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Fahim Ur Rahman</h5>
+            <p class="card-text">
+              <b></b>MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Lightweight Point Cloud Network for Real-Time 3D Object Detection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/Gaeul Han.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Gaeul Han</h5>
+            <p class="card-text">
+              <b></b>MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Object detection from thermal images on roads under low-visibility weather.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/dummy DP.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Jimmy Tsang</h5>
+            <p class="card-text">
+              <b></b>MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Medical Image Analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 people-card-row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/team/dummy DP.jpg" class="img-fluid rounded-start" alt="Christopher Silver">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Russell Frost</h5>
+            <p class="card-text">
+              <b></b>MSc. in Electrical and Computer Engineering<br>
+              <strong>Topic:</strong> Automated Music Transcription.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Undergraduate Students -->
+  <section id="undergraduate" class="students-info-section container pb-5">
+    <h2 class="text-center mb-4">Undergraduate Students</h2>
+    <div class="card card-hover shadow-hover students-info-section-card">
+      <div class="row g-0 mb-4 pb-4 border-bottom students-info-first-card people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">Kennet Shahi</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> LIDAR 3D Point Cloud Analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">Braydon Knezevic, David Loovere, Francisco Raposo, and Hanna Lahti</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> An AI-assisted System for Operational Efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">K. Kriti</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Thermal Image-based Fall Detection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">P. Curle, and M. Nisbet</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> TownHual: A mobile App-based Shipping Delivery System for Remote Communities in
+              Northern On- tario.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">N. Imperius, J. Tsang, and M. Tommasini</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Smart Parking: An Android Application.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">J. Fiorot, J. Grasley, M. Grandell, and P. Stoppel</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Machine Learning-based Music Recommendation System.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">S. Davey, C. Silver, and A. M. Velasquez</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Thermopile Sensor-based Elderly Fall Detection and Warning System for Ensuring
+              Fast Medical Aid.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">M. Martin, N.T. Merin, and C. Parmar</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> team Counting and Temperature Prediction for Automatic AC Controller System
+              Towards Energy Saving Smart Home.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">F. Kharadi, S. McKenna, and E. Trudel</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Fake News Detector Using Computer Vision and Natural Language Processing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">R. Friesen, N. Ahmed, W. Bugden, K. Dabhi</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> MRI Brain Tumor Segmentation Using Deep Convolutional Neural Network.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">O. Ebube, O. Fortune, and U. Emmanue</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Airline Reservation System.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 pb-4 border-bottom people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">P. Stoppel, P. Curle, M. Tommasini</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Vision-Based Occupancy Tracker for Public Safety.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 mb-4 people-card-row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">O.Y. AlSaeedy, A.A. Jafri, and J. Thakkar</h5>
+            <p class="card-text">
+              <strong>Topic:</strong> Higher Education Enterprise Resource Planning (ERP) System.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-         <div class="row-fluid">
-            <div class="span3 bs-docs-sidebar" id="navparent">
-               <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
-                  <li><a href="#principalinvestigator"> Faculty </a></li>
-                  <li><a href="#alumni">Alumni</a></li>
-                  <li><a href="#graduate">Graduate Students</a></li>
-                  <li><a href="#undergraduate">Undergraduate Students</a></li>
-               </ul>
-            </div>
+  <!-- Footer -->
+  <footer class="text-light pt-3 ">
+    <div class="container">
+
+      <!-- Desktop/tablet footer: visible from md and up -->
+      <div class="row text-center footer_element_height d-none d-md-flex">
+        <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+          <h6 class="fw-bold">Vision Intelligence and Data Lab</h6>
+          <p>Advancing intelligent systems through cutting-edge research in computer vision, data analytics, machine
+            learning, and AI to address real-world challenges with practical, impactful technological solutions.</p>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img src="assets/images/lablogo.png" alt="Logo" class="img-fluid footer-logo">
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center justify-content-center  text-center">
+          <h6 class="fw-bold">Address</h6>
+          <p>Vision Intelligence and Data Lab<br>
+            Lakehead University<br>
+            Thunder Bay, Ontario, Canada<br>
+            Monday to Friday (8.00AM - 5.00PM)<br>
+            <a href="https://www.google.com/maps/search/Lakehead+University,+Thunder+Bay,+Ontario,+Canada/@48.424393,-89.2591852,14z"
+              class="text-info text-decoration-none">Location</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Mobile-only footer: visible below md -->
+      <div class="row text-center justify-content-center d-flex d-md-none">
+        <div class="col-12 d-flex flex-column align-items-center text-center">
+          <h6 class="fw-bold">Vision Intelligence and Data Lab</h6>
+          <p>
+            Lakehead University<br>
+            Thunder Bay, Ontario, Canada<br>
+            Monday to Friday (8.00AM - 5.00PM)<br>
+            <a href="https://www.google.com/maps/search/Lakehead+University,+Thunder+Bay,+Ontario,+Canada/@48.424393,-89.2591852,14z"
+              class="text-info text-decoration-none">Location</a>
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-secondary">
+      <!-- Desktop/tablet footer: visible from md and up -->
+      <div class="text-center pb-3 d-none d-md-block">
+        <small>© 2025 Vision Intelligence and Data Lab. All rights reserved.</small>
+      </div>
+
+      <!-- Mobile-only footer: visible below md -->
+      <div class="text-center pb-3 d-block d-md-none">
+        <small>© 2025 VIDLab. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
 
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
 
-
-            <div class="span8 offset1">
-               <section id="principalinvestigator">
-                  <div class="page-header">
-                     <h3>Faculty</h3>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="https://www.lakeheadu.ca/users/A/takilan" class="thumbnail">
-                        <img src="./akilan_pp_w_bg.png" alt="Dr. Akilan, T. (Ph.D., P.Eng., SMIEEE)"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4>Dr. Akilan, T. (Ph.D., P.Eng., SMIEEE)</h4>
-                        <p>Associate Professor</p>
-                        <p><b>Department: </b>Software Engineering, Lakehead University</p>
-<!--                         <p>Ph.D. degree in Electrical and Computer Engineering from the University of Windsor, Windsor, Ontario, Canada. </p> -->
-                        <!-- <p><b>Phone: </b>(999) 999-9999 </p>--->
-                        <p><b>Email: </b><a>takilan[at]lakeheadu.ca</a></p>
-                        <p><b>Office Location: </b>ATAC5014</p>
-                        <p><b>Office Hours: </b>By appointment</p>
-                        
-                        <p><b>
-                           <a href="https://scholar.google.ca/citations?hl=en&user=d7VHPp4AAAAJ" target="_blank">Google Scholar</a>
-<!-- 
-                           , <a href="https://www.linkedin.com">Linkedin</a>, <a href="http://www.researchgate.net">ResearchGate</a> -->
-                        </b></p>
-                     </div>
-                  </div>
-               </section>
-               <hr>
-
-
-
-               <section id="alumni">
-                  <div class="page-header">
-                     <h3>Alumni</h3>
-                  </div>
-
-
-                  <table border="1">
-
-                     <tr>
-                        <td>
-                           <img src="images\people\Christ Silver.png" alt="Christopher Silver" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; margin-top:10px; object-fit: cover;" ></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Christopher Silver</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Development of an Advanced Thermal Imaging-based Human Fall Detection System. 
-                           <a href="https://www.lakeheadu.ca/alumni/journey/magazine/winter-2024/articles/node/202470" target="_blank">[Link]</a>
-                        </td>
-                     </tr>   
-
-                     <tr>
-                        <td><img src="images\people\Harish Sundaralingam2.jpg" alt="Harish Sundaralingam" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Harish Sundaralingam</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Enhancing Object Detection in Complex Scenes: A Semantic Segmentation-aware Framework with Attention-Gating for Improved Small Object Detection.
-                        </td>
-                     </tr>  
-
-                     <tr>
-                        <td><img src="images\people\general_photo.png" alt="Kevin Genereux" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px;  object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Kevin Genereux</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Deep Learning-based Intracranial Hemorrhage Segmentation.
-                        </td>
-                     </tr>  
-                     
-                     <tr>
-                        <td><img src="images\people\general_photo.png" alt="Mohammad Arshi-Saloot" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px;  object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Mohammad Arshi-Saloot</h4>
-                           Postdoc. <br>
-                           Topic: Advanced Automation System for Human Capital Hiring and Retention.
-                        </td>
-                     </tr>  
-                     
-                     <tr>
-                        <td><img src="images\people\Nusrat Jahan2.jpg" alt="Nusrat Jahan" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Nusrat Jahan</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: An Improved Semi-Supervised Learning Framework for Image Semantic Segmentation.
-                        </td>
-                     </tr>  
-
-                     <tr>
-                        <td><img src="images\people\general_photo.png" alt="Siavash Hosseini" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Siavash Hosseini</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Regression Modelling for Industrial Applications.
-                        </td>
-                     </tr>  
-
-                     <tr>
-                        <td><img src="images\people\Tharrengini Suresh.jpg" alt="Tharrengini Suresh" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Tharrengini Suresh</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Semantic Segmentation with Edge-Context Enrichment and Attention Strategies: A Refined
-                           Framework for Improved Performance in Complex Visual Environments.
-                        </td>
-                     </tr>  
-
-                  </table>
-
-               
-
-               </section>
-
-
-               <section id="graduate">
-                  <div class="page-header">
-                     <h3>Graduate students</h3>
-                  </div>
-
-
-                  <table border="1">
-
-                     <tr>
-                        <td><img src="images\people\Chee Mei Ling.jpg" alt="Chee Mei Ling (Irene)" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; margin-top:10px; object-fit: cover;" ></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Chee Mei Ling (Irene)</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Agriculture-Vision: A Large Aerial Image Database for Agricultural Pattern Analysis.
-                        </td>
-                     </tr>   
-
-                     <tr>
-                        <td><img src="images\people\Fahim Ur Rahman.jpg" alt="Fahim Rahman" style="width:200px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px;  object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Fahim Ur Rahman</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Lightweight Point Cloud Network for Real-Time 3D Object Detection.
-                        </td>
-                     </tr>  
-                     
-                     <tr>
-                        <td><img src="images\people\Gaeul Han.jpeg" alt="Gaeul Han" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px;  object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Gaeul Han</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Object detection from thermal images on roads under low-visibility weather.
-                        </td>
-                     </tr>  
-                     
-
-                     <tr>
-                        <td><img src="images\people\general_photo.png" alt="Jimmy Tsang" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Jimmy Tsang</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Medical Image Analysis.
-                        </td>
-                     </tr>  
-
-                     <tr>
-                        <td><img src="images\people\general_photo.png" alt="Russell Frost" style="width:100px; height:100px; border-radius: 50%; border: 1px solid rgb(200, 200, 200); margin-right: 10px; object-fit: cover;"></td>
-                        <td>
-                           <h4 style="color: #0088cc;">Russell Frost</h4>
-                           MSc. in Electrical and Computer Engineering. <br>
-                           Topic: Automated Music Transcription.
-                        </td>
-                     </tr>  
-
-
-                  </table>
-
-                
-               </section>
-       
-
-
-
-
-               <section id="undergraduate">
-                  <div class="page-header">
-                     <h3>Undergraduate Students</h3>
-                  </div>
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           Braydon Knezevic, David Loovere, Francisco Raposo, and Hanna Lahti
-                        </h4>
-                        Topic: An AI-assisted System for Operational Efficiency.
-                     </div>
-                  </div>
-                  <hr>
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           K. Kriti
-                        </h4>
-                        Topic: Thermal Image-based Fall Detection.
-                     </div>
-                  </div>
-                  <hr>
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           P. Curle, and M. Nisbet
-                        </h4>
-                        Topic: TownHual: A mobile App-based Shipping Delivery System for Remote Communities in Northern On-
-                        tario.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           N. Imperius, J. Tsang, and M. Tommasini
-                        </h4>
-                        Topic: Smart Parking: An Android Application.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           J. Fiorot, J. Grasley, M. Grandell, and P. Stoppel
-                        </h4>
-                        Topic: Machine Learning-based Music Recommendation System.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           S. Davey, C. Silver, and A. M. Velasquez
-                        </h4>
-                        Topic: Thermopile Sensor-based Elderly Fall Detection and Warning System for Ensuring Fast Medical Aid.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           M. Martin, N.T. Merin, and C. Parmar
-                        </h4>
-                        Topic: People Counting and Temperature Prediction for Automatic AC Controller System Towards Energy
-                        Saving Smart Home.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           F. Kharadi, S. McKenna, and E. Trudel
-                        </h4>
-                        Topic: Fake News Detector Using Computer Vision and Natural Language Processing.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           R. Friesen, N. Ahmed, W. Bugden, K. Dabhi
-                        </h4>
-                        Topic: MRI Brain Tumor Segmentation Using Deep Convolutional Neural Network.
-                     </div>
-                  </div>
-                  <hr>
-                  
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           O. Ebube, O. Fortune, and U. Emmanue
-                        </h4>
-                        Topic: Airline Reservation System.
-                     </div>
-                  </div>
-                  <hr>
-
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           P. Stoppel, P. Curle, M. Tommasini
-                        </h4>
-                        Topic: Vision-Based Occupancy Tracker for Public Safety.
-                     </div>
-                  </div>
-                  <hr>
-
-                  <div class="row-fluid">
-                     <div class="span9">
-                        <h4 style="color: #0088cc;">
-                           O.Y. AlSaeedy, A.A. Jafri, and J. Thakkar
-                        </h4>
-                        Topic: Higher Education Enterprise Resource Planning (ERP) System.
-                     </div>
-                  </div>
-                  <hr>
-                
-                  
-               </section>
-
-
-            </div>
-         </div>
-
-      <footer id="footer">
-         <div class="container-fluid">
-            <div class="row-fluid">
-               <div class="span5">
-                  <h3>Office Hours</h3>
-                  <p><b>Monday to Friday (8.00am - 5.00pm)</p>
-                  <!-- <p><b>Phone: </b>999-999-9999</p>
-                  <p><b>Cell: </b>999-999-9999</p>
-                  <a href="mailto:your.email@uni.edu">Email</a> -->
-               </div>
-               <div class="span2" style="margin-top: 5px;"> 
-                  <img src = "./lablogo.png" alt="research-lab-logo" style="width: 100px; height: auto;"/>
-               </div>
-               <div class="span5">
-                  <h3>Address</h3>
-                  <p>Vision Intelligence and Data Lab<br>
-                     Lakehead University<br>
-                     Thunder Bay, Ontario, Canada<br> 
-                  </p>
-                  <a target="_blank" href="https://www.google.com/maps/search/Lakehead+University,+Thunder+Bay,+Ontario,+Canada/@48.424393,-89.2591852,14z">Show Map</a>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- Le javascript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="js/jquery-1.9.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
-         });
-         
-      </script>
-   </body>
 </html>
-
-
