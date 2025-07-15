@@ -1189,7 +1189,37 @@ footer hr {
   #home {
     background-size: cover !important;
     background-attachment: scroll;
-    padding: 0 5vw;
+    background-position: center center !important;
+    padding: 40px 5vw !important;
+    height: auto !important;
+    min-height: 500px;
+    margin-top: 70px !important;
+  }
+
+  #home .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px;
+  }
+
+  #home h1 {
+    font-size: 36px !important;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  #home .lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 17px !important;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  #home .theme-box {
+    width: 100% !important;
+    padding: 25px;
+    margin: 30px 0;
   }
 
   .d-flex.justify-content-center.flex-nowrap {
@@ -1226,6 +1256,60 @@ footer hr {
   }
 }
 
+/* Extra Small Mobile Devices */
+@media (max-width: 375px) {
+  #home {
+    height: auto !important;
+    min-height: 420px;
+    padding: 30px 10px !important;
+    margin-top: 70px !important;
+  }
+
+  #home .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px;
+  }
+
+  #home h1 {
+    font-size: 24px !important;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  #home .lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  #home .theme-box {
+    width: 100% !important;
+    padding: 12px;
+    margin: 15px 0;
+  }
+
+  #home .theme-box h5 {
+    font-size: 15px !important;
+    margin-bottom: 12px;
+  }
+
+  #home .theme-box ul li {
+    font-size: 13px !important;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .d-flex.justify-content-center.flex-nowrap a {
+    width: 100% !important;
+    max-width: 260px;
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+  }
+}
+
 /* Small Mobile Devices */
 @media (max-width: 430px) {
   .navbar-collapse {
@@ -1237,16 +1321,64 @@ footer hr {
     font-size: var(--font-size-lg);
   }
 
+  #home {
+    height: auto !important;
+    min-height: 450px;
+    padding: 40px 15px !important;
+    margin-top: 70px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
   #home .container {
-    width: 400px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px;
   }
 
   #home h1 {
-    font-size: 32px;
+    font-size: 28px !important;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
 
   #home .lead {
-    width: 380px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.4;
+    margin-bottom: 25px;
+  }
+
+  #home .theme-box {
+    width: 100% !important;
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  #home .theme-box h5 {
+    font-size: 16px !important;
+    margin-bottom: 15px;
+  }
+
+  #home .theme-box ul li {
+    font-size: 14px !important;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .d-flex.justify-content-center.flex-nowrap {
+    flex-direction: column !important;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .d-flex.justify-content-center.flex-nowrap a {
+    width: 100% !important;
+    max-width: 280px;
+    margin: 0 auto !important;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
   }
 
   .custom-dropdown {
@@ -1270,12 +1402,64 @@ footer hr {
     font-size: var(--font-size-lg);
   }
 
+  #home {
+    height: auto !important;
+    min-height: 480px;
+    padding: 40px 20px !important;
+    margin-top: 70px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
   #home .container {
-    width: 440px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px;
+  }
+
+  #home h1 {
+    font-size: 30px !important;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
 
   #home .lead {
-    width: 400px;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.4;
+    margin-bottom: 25px;
+  }
+
+  #home .theme-box {
+    width: 100% !important;
+    padding: 20px;
+    margin: 25px 0;
+  }
+
+  #home .theme-box h5 {
+    font-size: 17px !important;
+    margin-bottom: 15px;
+  }
+
+  #home .theme-box ul li {
+    font-size: 15px !important;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .d-flex.justify-content-center.flex-nowrap {
+    flex-direction: column !important;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .d-flex.justify-content-center.flex-nowrap a {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto !important;
+    padding: 12px 24px !important;
+    font-size: 15px !important;
   }
 
   #faculty img {
