@@ -17,7 +17,7 @@ function initializeFloatingNav() {
       let current = null;
       sections.forEach(sec => {
         const rect = sec.getBoundingClientRect();
-        if (rect.top <= 150 && rect.bottom > 150) { // Adjusted for header offset
+        if (rect.top <= 200 && rect.bottom > 200) { // Adjusted to match scroll offset
           current = sec;
         }
       });
@@ -368,7 +368,7 @@ function initializeMobileSectionFilters() {
 function scrollToSection(category) {
   const targetSection = document.getElementById(category);
   if (targetSection) {
-    const headerOffset = 150; // Increased offset to clear fixed navigation header
+    const headerOffset = 200; // Increased offset for better clearance
     const elementPosition = targetSection.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
