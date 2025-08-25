@@ -4,11 +4,20 @@ function initializeFloatingNav() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#floating-nav .nav-link');
 
+    // Add click event listeners to desktop nav links
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        scrollToSection(targetId);
+      });
+    });
+
     function updateActive() {
       let current = null;
       sections.forEach(sec => {
         const rect = sec.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom > 100) {
+        if (rect.top <= 150 && rect.bottom > 150) { // Adjusted for header offset
           current = sec;
         }
       });
@@ -342,7 +351,7 @@ function initializeBibbaseHide() {
   }
 }
 
-// Mobile filter functionality for faculty/alumni/graduate/undergraduate sections
+// Mobile filter functionality for faculty/alumni/graduate/collaborators/interns/undergraduate sections
 function initializeMobileSectionFilters() {
   const filterBtns = document.querySelectorAll('.mobile-filter-btn');
   filterBtns.forEach(btn => {
@@ -350,25 +359,23 @@ function initializeMobileSectionFilters() {
       filterBtns.forEach(b => b.classList.remove('active'));
       this.classList.add('active');
       const filterValue = this.getAttribute('data-filter');
-      filterSections(filterValue);
+      scrollToSection(filterValue);
     });
   });
-
-  if (window.innerWidth <= 430) {
-    filterSections('faculty');
-  }
 }
 
-// Helper to filter faculty/alumni/graduate/undergraduate
-function filterSections(category) {
-  document
-    .querySelectorAll('#faculty, #alumni, #graduate, #undergraduate')
-    .forEach(section => {
-      section.style.display = 'none';
-    });
+// Helper to scroll to the selected section smoothly
+function scrollToSection(category) {
   const targetSection = document.getElementById(category);
   if (targetSection) {
-    targetSection.style.display = 'block';
+    const headerOffset = 150; // Increased offset to clear fixed navigation header
+    const elementPosition = targetSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 }
 
