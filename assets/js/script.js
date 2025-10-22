@@ -547,10 +547,13 @@ function initializeProfileViewer() {
   const viewerImg = document.getElementById('profileViewerImage');
   const viewerDetails = document.getElementById('profileViewerDetails');
   const closeBtn = document.querySelector('#profileViewerModal .viewer-close');
-  const prevBtn = document.querySelector('#profileViewerModal .viewer-prev');
-  const nextBtn = document.querySelector('#profileViewerModal .viewer-next');
+  const prevBtn = document.querySelector('#profileViewerModal .viewer-nav.viewer-prev');
+  const nextBtn = document.querySelector('#profileViewerModal .viewer-nav.viewer-next');
   
-  if (!modal || !viewerImg || !viewerDetails) return;
+  if (!modal || !viewerImg || !viewerDetails) {
+    console.warn('Profile viewer elements not found');
+    return;
+  }
   
   let currentIndex = 0;
   let profileCards = [];
@@ -563,18 +566,6 @@ function initializeProfileViewer() {
         return section && section.style.display !== 'none';
       });
   }
-  
-  // Open viewer
-  document.querySelectorAll('.people-card-row').forEach((card) => {
-    card.style.cursor = 'pointer';
-    card.addEventListener('click', function() {
-      updateProfileCards();
-      currentIndex = profileCards.indexOf(this);
-      showProfile();
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
   
   // Show current profile
   function showProfile() {
@@ -604,6 +595,26 @@ function initializeProfileViewer() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
   }
+  
+  // Use event delegation for better compatibility
+  document.addEventListener('click', function(e) {
+    const profileCard = e.target.closest('.people-card-row');
+    if (profileCard) {
+      e.preventDefault();
+      updateProfileCards();
+      currentIndex = profileCards.indexOf(profileCard);
+      if (currentIndex !== -1) {
+        showProfile();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  });
+  
+  // Set cursor style
+  document.querySelectorAll('.people-card-row').forEach(card => {
+    card.style.cursor = 'pointer';
+  });
   
   if (closeBtn) {
     closeBtn.addEventListener('click', closeViewer);
