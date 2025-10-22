@@ -234,19 +234,120 @@ function initializeFilters() {
 
 // Initializes modal images
 function initializeGalleryModals() {
-  const handler = (sel, id) =>
+  // Initialize research modal (keep existing functionality)
+  const researchHandler = (sel, id) =>
     document.querySelectorAll(sel).forEach(img => {
       img.setAttribute('data-bs-toggle', 'modal');
       img.setAttribute('data-bs-target', `#${id}`);
       img.addEventListener('click', () => {
-        const modalImg = document.getElementById(
-          id === 'galleryModal' ? 'modalImage' : 'modalResearchImage'
-        );
+        const modalImg = document.getElementById('modalResearchImage');
         if (modalImg) modalImg.src = img.src;
       });
     });
-  handler('.gallery-img', 'galleryModal');
-  handler('.research-image', 'researchModal');
+  researchHandler('.research-image', 'researchModal');
+  
+  // Initialize gallery image viewer with navigation
+  initializeImageViewer();
+}
+
+// Image Viewer with Navigation Controls
+function initializeImageViewer() {
+  const modal = document.getElementById('imageViewerModal');
+  const viewerImg = document.getElementById('viewerImage');
+  const closeBtn = document.querySelector('.viewer-close');
+  const prevBtn = document.querySelector('.viewer-prev');
+  const nextBtn = document.querySelector('.viewer-next');
+  
+  if (!modal || !viewerImg) return;
+  
+  let currentIndex = 0;
+  let galleryImages = [];
+  
+  // Collect all visible gallery images
+  function updateGalleryImages() {
+    galleryImages = Array.from(document.querySelectorAll('.gallery-img'))
+      .filter(img => {
+        const section = img.closest('.filter-section');
+        return section && section.style.display !== 'none';
+      });
+  }
+  
+  // Open viewer
+  document.querySelectorAll('.gallery-img').forEach((img) => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      updateGalleryImages();
+      currentIndex = galleryImages.indexOf(this);
+      showImage();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  // Show current image
+  function showImage() {
+    if (galleryImages.length > 0 && currentIndex >= 0 && currentIndex < galleryImages.length) {
+      const currentImg = galleryImages[currentIndex];
+      viewerImg.src = currentImg.src;
+      
+      // Update button visibility
+      if (prevBtn) prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+      if (nextBtn) nextBtn.style.display = currentIndex === galleryImages.length - 1 ? 'none' : 'block';
+    }
+  }
+  
+  // Close viewer
+  function closeViewer() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeViewer);
+  }
+  
+  // Close on background click
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeViewer();
+    }
+  });
+  
+  // Navigation
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (currentIndex > 0) {
+        currentIndex--;
+        showImage();
+      }
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (currentIndex < galleryImages.length - 1) {
+        currentIndex++;
+        showImage();
+      }
+    });
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('active')) return;
+    
+    if (e.key === 'Escape') {
+      closeViewer();
+    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+      currentIndex--;
+      showImage();
+    } else if (e.key === 'ArrowRight' && currentIndex < galleryImages.length - 1) {
+      currentIndex++;
+      showImage();
+    }
+  });
 }
 
 // Initializes gallery filters
@@ -265,7 +366,7 @@ function initializeGalleryFilters() {
       h.className = 'gallery-section-heading mt-4 mb-3 text-center';
       h.style.position = 'relative';
       h.style.fontWeight = '700';
-      h.textContent = c === 'events' ? 'Events Images' : 'Researches Images';
+      h.textContent = c === 'events' ? 'Events Images' : 'Research Posters';
       s.parentNode.insertBefore(h, s);
     });
   }
@@ -440,6 +541,118 @@ function initializePageShowReload() {
   });
 }
 
+// Profile Viewer with Navigation Controls
+function initializeProfileViewer() {
+  const modal = document.getElementById('profileViewerModal');
+  const viewerImg = document.getElementById('profileViewerImage');
+  const viewerDetails = document.getElementById('profileViewerDetails');
+  const closeBtn = document.querySelector('#profileViewerModal .viewer-close');
+  const prevBtn = document.querySelector('#profileViewerModal .viewer-prev');
+  const nextBtn = document.querySelector('#profileViewerModal .viewer-next');
+  
+  if (!modal || !viewerImg || !viewerDetails) return;
+  
+  let currentIndex = 0;
+  let profileCards = [];
+  
+  // Collect all visible profile cards
+  function updateProfileCards() {
+    profileCards = Array.from(document.querySelectorAll('.people-card-row'))
+      .filter(card => {
+        const section = card.closest('section');
+        return section && section.style.display !== 'none';
+      });
+  }
+  
+  // Open viewer
+  document.querySelectorAll('.people-card-row').forEach((card) => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function() {
+      updateProfileCards();
+      currentIndex = profileCards.indexOf(this);
+      showProfile();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  // Show current profile
+  function showProfile() {
+    if (profileCards.length > 0 && currentIndex >= 0 && currentIndex < profileCards.length) {
+      const currentCard = profileCards[currentIndex];
+      const imgElement = currentCard.querySelector('img');
+      const cardBody = currentCard.querySelector('.card-body');
+      
+      if (imgElement && cardBody) {
+        viewerImg.src = imgElement.src;
+        viewerImg.alt = imgElement.alt;
+        
+        // Clone the card body content to preserve all styling and links
+        const clonedContent = cardBody.cloneNode(true);
+        viewerDetails.innerHTML = '';
+        viewerDetails.appendChild(clonedContent);
+      }
+      
+      // Update button visibility
+      if (prevBtn) prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+      if (nextBtn) nextBtn.style.display = currentIndex === profileCards.length - 1 ? 'none' : 'block';
+    }
+  }
+  
+  // Close viewer
+  function closeViewer() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeViewer);
+  }
+  
+  // Close on background click
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeViewer();
+    }
+  });
+  
+  // Navigation
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (currentIndex > 0) {
+        currentIndex--;
+        showProfile();
+      }
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (currentIndex < profileCards.length - 1) {
+        currentIndex++;
+        showProfile();
+      }
+    });
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('active')) return;
+    
+    if (e.key === 'Escape') {
+      closeViewer();
+    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+      currentIndex--;
+      showProfile();
+    } else if (e.key === 'ArrowRight' && currentIndex < profileCards.length - 1) {
+      currentIndex++;
+      showProfile();
+    }
+  });
+}
+
 // Main initialization
 document.addEventListener('DOMContentLoaded', () => {
   initializeFloatingNav();
@@ -453,6 +666,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeMobileSectionFilters();
   initializeCustomHamburger();
   initializePageShowReload();
+  initializeProfileViewer();
 });
 
 

@@ -111,6 +111,12 @@
           <img src="assets/images/gallery/Convocation (6).jpg" class="gallery-img" alt="VIDLab Convocation 2025">
         </div>
         <div class="col-md-4">
+          <img src="assets/images/gallery/Siavash_Poster (1).jpeg" class="gallery-img" alt="Siavash Poster 1">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/gallery/Siavash_Poster (2).jpeg" class="gallery-img" alt="Siavash Poster 2">
+        </div>
+        <div class="col-md-4">
           <img src="assets/images/gallery/Conference (1).jpg" class="gallery-img">
         </div>
         <div class="col-md-4">
@@ -223,14 +229,13 @@
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <img id="modalImage" src="" class="img-fluid">
-        </div>
-      </div>
+  <!-- Image Viewer Modal -->
+  <div id="imageViewerModal" class="image-viewer-modal">
+    <span class="viewer-close">&times;</span>
+    <button class="viewer-nav viewer-prev">&#10094;</button>
+    <button class="viewer-nav viewer-next">&#10095;</button>
+    <div class="viewer-content">
+      <img id="viewerImage" src="" alt="Gallery Image">
     </div>
   </div>
 
