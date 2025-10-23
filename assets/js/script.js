@@ -541,129 +541,6 @@ function initializePageShowReload() {
   });
 }
 
-// Profile Viewer with Navigation Controls
-function initializeProfileViewer() {
-  const modal = document.getElementById('profileViewerModal');
-  const viewerImg = document.getElementById('profileViewerImage');
-  const viewerDetails = document.getElementById('profileViewerDetails');
-  const closeBtn = document.querySelector('#profileViewerModal .viewer-close');
-  const prevBtn = document.querySelector('#profileViewerModal .viewer-nav.viewer-prev');
-  const nextBtn = document.querySelector('#profileViewerModal .viewer-nav.viewer-next');
-  
-  if (!modal || !viewerImg || !viewerDetails) {
-    console.warn('Profile viewer elements not found');
-    return;
-  }
-  
-  let currentIndex = 0;
-  let profileCards = [];
-  
-  // Collect all visible profile cards
-  function updateProfileCards() {
-    profileCards = Array.from(document.querySelectorAll('.people-card-row'))
-      .filter(card => {
-        const section = card.closest('section');
-        return section && section.style.display !== 'none';
-      });
-  }
-  
-  // Show current profile
-  function showProfile() {
-    if (profileCards.length > 0 && currentIndex >= 0 && currentIndex < profileCards.length) {
-      const currentCard = profileCards[currentIndex];
-      const imgElement = currentCard.querySelector('img');
-      const cardBody = currentCard.querySelector('.card-body');
-      
-      if (imgElement && cardBody) {
-        viewerImg.src = imgElement.src;
-        viewerImg.alt = imgElement.alt;
-        
-        // Clone the card body content to preserve all styling and links
-        const clonedContent = cardBody.cloneNode(true);
-        viewerDetails.innerHTML = '';
-        viewerDetails.appendChild(clonedContent);
-      }
-      
-      // Update button visibility
-      if (prevBtn) prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
-      if (nextBtn) nextBtn.style.display = currentIndex === profileCards.length - 1 ? 'none' : 'block';
-    }
-  }
-  
-  // Close viewer
-  function closeViewer() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  
-  // Use event delegation for better compatibility
-  document.addEventListener('click', function(e) {
-    const profileCard = e.target.closest('.people-card-row');
-    if (profileCard) {
-      e.preventDefault();
-      updateProfileCards();
-      currentIndex = profileCards.indexOf(profileCard);
-      if (currentIndex !== -1) {
-        showProfile();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-  });
-  
-  // Set cursor style
-  document.querySelectorAll('.people-card-row').forEach(card => {
-    card.style.cursor = 'pointer';
-  });
-  
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeViewer);
-  }
-  
-  // Close on background click
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      closeViewer();
-    }
-  });
-  
-  // Navigation
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      if (currentIndex > 0) {
-        currentIndex--;
-        showProfile();
-      }
-    });
-  }
-  
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      if (currentIndex < profileCards.length - 1) {
-        currentIndex++;
-        showProfile();
-      }
-    });
-  }
-  
-  // Keyboard navigation
-  document.addEventListener('keydown', function(e) {
-    if (!modal.classList.contains('active')) return;
-    
-    if (e.key === 'Escape') {
-      closeViewer();
-    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-      currentIndex--;
-      showProfile();
-    } else if (e.key === 'ArrowRight' && currentIndex < profileCards.length - 1) {
-      currentIndex++;
-      showProfile();
-    }
-  });
-}
-
 // Main initialization
 document.addEventListener('DOMContentLoaded', () => {
   initializeFloatingNav();
@@ -677,7 +554,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeMobileSectionFilters();
   initializeCustomHamburger();
   initializePageShowReload();
-  initializeProfileViewer();
 });
 
 
