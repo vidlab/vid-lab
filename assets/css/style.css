@@ -216,14 +216,41 @@ body {
 /*──────────────────────────────────────────────────────────────────────────────
   NAVIGATION BAR
 ──────────────────────────────────────────────────────────────────────────────*/
+/* ============================================
+   Navigation Bar Styles
+   ============================================ */
+
+/**
+ * Main navbar styling
+ * - Background color from theme
+ * - Backdrop blur for modern glass effect
+ * - Subtle shadow for depth
+ */
 .navbar {
   background-color: var(--secondary-color) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   font-weight: bold;
   color: var(--primary-color) !important;
   font-size: var(--font-size-xl);
+  transition: all 0.3s ease;
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: var(--primary-color) !important;
+  text-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+}
+
+.navbar-brand:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-nav .nav-link {
@@ -445,21 +472,37 @@ body {
   PEOPLE PAGE
 ──────────────────────────────────────────────────────────────────────────────*/
 
+/* ============================================
+   Floating Navigation Sidebar (Desktop)
+   ============================================ */
+
+/**
+ * Fixed navigation sidebar on right side
+ * - Centered vertically
+ * - Modern glass effect with backdrop blur
+ * - Enhanced shadows and rounded corners
+ */
 .floating-nav {
   position: fixed;
   top: 50%;
   right: var(--spacing-lg);
   transform: translateY(-50%);
   background: var(--white);
-  border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
   z-index: 1000;
   text-align: center;
   flex-direction: column;
 }
 
+/**
+ * Floating nav link styling
+ * - Modern rounded appearance
+ * - Smooth transitions
+ */
 .floating-nav a {
   display: block;
   margin: 8px 0;
@@ -468,13 +511,18 @@ body {
   text-decoration: none;
   font-size: 14px;
   padding: 8px 12px;
-  border-radius: var(--border-radius-sm);
-  transition: var(--transition);
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
+/**
+ * Active and hover states
+ * - Cyan background for active link
+ * - Light background for hover
+ */
 .floating-nav a.active {
-  background-color: var(--primary-dark);
-  color: var(--white);
+  background: #06b6d4;
+  color: white;
 }
 
 .floating-nav a:hover:not(.active) {
@@ -514,6 +562,31 @@ body {
   border-radius: var(--border-radius);
 }
 
+/* ============================================
+   Section Spacing & Scroll Anchor Positioning
+   ============================================ */
+
+/**
+ * Ensures all page sections have consistent spacing
+ * py-5 = padding top + bottom (3rem each)
+ * This provides proper spacing for section titles and content
+ * 
+ * scroll-margin-top: Creates offset when scrolling to anchor links
+ * Value: 80px (navbar ~56px + comfortable buffer for better visibility)
+ */
+section[id] {
+  scroll-margin-top: 80px; /* Optimized offset for desktop - navbar + buffer */
+}
+
+/* Specific sections need less offset */
+#graduate,
+#collaborators,
+#interns,
+#undergraduate {
+  scroll-margin-top: 70px; /* Reduced offset for these sections */
+}
+
+/* Students Info Section Cards */
 .students-info-section .students-info-section-card {
   width: 755px;
   margin: 0 auto;
@@ -552,6 +625,11 @@ body {
   height: 100%;
 }
 
+/* Master's Projects - Full width card body */
+#masters-projects .card-body {
+  width: 100% !important;
+}
+
 #faculty .card-body a,
 .students-info-section a {
   color: var(--primary-color) !important;
@@ -583,20 +661,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.research-card {
-  background: var(--white);
-  border-radius: var(--spacing-sm);
-  margin-bottom: 2rem;
-  padding: 0;
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.research-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-}
-
+/* Research card child layout rules */
 .research-card .col-md-5 {
   display: flex;
   align-items: center;
@@ -1165,6 +1230,15 @@ footer hr {
   RESPONSIVE STYLES - SHARED MOBILE NAVIGATION
 ──────────────────────────────────────────────────────────────────────────────*/
 /* Mobile Filter Bar (shared across breakpoints) */
+/* ============================================
+   Mobile Filter Bar Styles
+   ============================================ */
+
+/**
+ * Sticky filter bar for mobile navigation
+ * - Positioned below navbar with horizontal scrolling
+ * - Shows section filter buttons
+ */
 .mobile-filter-bar {
   position: sticky;
   top: 60px;
@@ -1182,23 +1256,65 @@ footer hr {
   gap: var(--spacing-sm);
 }
 
+/**
+ * Mobile filter buttons
+ * - Default state: light gray background
+ * - Active state: cyan background with white text
+ * - Smooth transitions between states
+ * - No borders or outlines to prevent visual artifacts
+ */
 .mobile-filter-btn {
-  padding: 8px 16px;
-  background: var(--bg-light);
-  border-radius: var(--border-radius);
-  color: var(--text-primary);
+  padding: 10px 18px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  color: #475569;
   font-size: 14px;
+  font-weight: 500;
   white-space: nowrap;
-  transition: var(--transition);
+  transition: all 0.3s ease;
   border: none;
+  outline: none;
   cursor: pointer;
+  box-shadow: none;
+}
+
+/**
+ * Remove focus outline and prevent border artifacts
+ */
+.mobile-filter-btn:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/**
+ * Active and hover states for mobile filter buttons
+ * - Cyan background (#06b6d4)
+ * - White text for contrast
+ * - Subtle shadow for depth (no transform to avoid visual glitches)
+ * - No borders or outlines
+ */
+.mobile-filter-btn:hover {
+  background: #e2e8f0;
+  color: #334155;
+  border: none;
+  outline: none;
 }
 
 .mobile-filter-btn.active {
-  background-color: var(--primary-dark);
-  color: var(--white);
-  border-color: var(--primary-color);
+  background: #06b6d4 !important;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.25) !important;
+  /* No transform to prevent underline appearance */
 }
+
+.mobile-filter-btn.active:focus {
+  outline: none !important;
+  border: none !important;
+}
+
 
 /* Shared Mobile Navigation Styles */
 @media (max-width: 991px) {
@@ -1613,6 +1729,16 @@ footer hr {
 }
 
 /* Tablet Portrait */
+/* ============================================
+   Tablet Responsive Design (481px - 768px)
+   ============================================ */
+
+/**
+ * Tablet breakpoint adjustments
+ * - Optimizes navbar for tablet screens
+ * - Adjusts image sizes for better tablet display
+ * - Ensures proper scroll positioning on tablets
+ */
 @media (min-width: 481px) and (max-width: 768px) {
   .navbar-collapse {
     max-width: 220px;
@@ -1633,7 +1759,25 @@ footer hr {
     width: 200px !important;
     height: 200px !important;
   }
+  
+  /* Tablet-specific scroll positioning */
+  section[id] {
+    scroll-margin-top: 80px; /* Optimized offset for better header visibility */
+  }
+  
+  /* Specific sections need less offset on tablet */
+  #graduate,
+  #collaborators,
+  #interns,
+  #undergraduate {
+    scroll-margin-top: 70px;
+  }
+  
+  html {
+    scroll-padding-top: 80px;
+  }
 }
+
 
 /* Tablet Landscape */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1859,12 +2003,7 @@ footer hr {
   border-left-color: #06b6d4;
 }
 
-/* Enhanced Navigation */
-.navbar {
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
+/* Navigation Link Styles */
 .nav-link {
   border-radius: 6px;
   transition: all 0.2s ease;
@@ -1939,58 +2078,39 @@ section h2::after {
 }
 
 /* Enhanced Filter Buttons */
-.gallery-filter-btn, .mobile-filter-btn {
-  border-radius: 20px;
-  padding: 8px 16px;
+/* ============================================
+   Gallery & Mobile Filter Button Enhancements
+   ============================================ */
+
+/**
+ * Gallery filter buttons (for gallery page)
+ * - Rounded corners with modern styling
+ * - Transform effect on hover for desktop
+ */
+.gallery-filter-btn {
+  border-radius: 8px;
+  padding: 10px 18px;
   border: 1px solid #e2e8f0;
-  background: white;
+  background: #f8fafc;
   transition: all 0.3s ease;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.gallery-filter-btn:hover, .mobile-filter-btn:hover,
-.gallery-filter-btn.active, .mobile-filter-btn.active {
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
   background: #06b6d4;
   color: white;
+  border-color: #06b6d4;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 }
 
-/* Enhanced Floating Navigation */
-.floating-nav {
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
+/* ============================================
+   Enhanced Card Styles
+   ============================================ */
 
-.floating-nav a {
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  padding: 8px 12px;
-}
-
-.floating-nav a.active {
-  background: #06b6d4;
-  color: white;
-}
-
-.floating-nav a:hover:not(.active) {
-  background-color: rgba(6, 182, 212, 0.1);
-}
-
-/* Enhanced People Cards */
-.students-info-section-card {
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  border: none;
-}
-
-.students-info-section-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
+/* Enhanced Faculty Cards */
 #faculty .card {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
@@ -2075,19 +2195,76 @@ p {
 }
 
 /* Enhanced Responsive Design */
+/* ============================================
+   Responsive Design - Mobile & Tablet
+   ============================================ */
+
+/**
+ * Mobile breakpoint (max-width: 768px)
+ * - Adjusts card hover effects for better mobile experience
+ * - Reduces scroll offset for smaller screens
+ * - Optimizes section spacing
+ * - Ensures proper scroll anchor positioning
+ */
 @media (max-width: 768px) {
+  /* Reduce hover transform on mobile for better performance */
   .card:hover, .research-card:hover {
     transform: translateY(-4px);
   }
   
+  /* Adjust section heading underline for mobile */
   section h2::after {
     width: 40px;
   }
   
+  /* Optimize padding for mobile content */
   .research-content {
     padding: 1.5rem;
   }
+  
+  /* Adjust scroll offset for mobile (navbar + mobile filter bar) */
+  section[id] {
+    scroll-margin-top: 130px; /* Mobile navbar (~56px) + mobile filter bar (~60px) + buffer */
+  }
+  
+  /* Specific sections need less offset on mobile */
+  #graduate,
+  #collaborators,
+  #interns,
+  #undergraduate {
+    scroll-margin-top: 120px;
+  }
+  
+  /* Ensure mobile filter bar doesn't obstruct content */
+  html {
+    scroll-padding-top: 130px;
+  }
+  
+  /* Optimize section spacing for mobile */
+  section.py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  /* Ensure subsection cards are full width on mobile */
+  .students-info-section-card {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Adjust card body padding on mobile */
+  .students-info-section .card-body {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  /* Stack subsection headers properly on mobile */
+  .card-header h5 {
+    font-size: 0.9rem !important;
+  }
 }
+
 
 /* Enhanced Accessibility */
 *:focus {
@@ -2099,9 +2276,18 @@ p {
   background: rgba(6, 182, 212, 0.2);
 }
 
-/* Enhanced Scroll Behavior */
+/* ============================================
+   Enhanced Scroll Behavior
+   ============================================ */
+
+/**
+ * Smooth scrolling for all anchor links
+ * scroll-padding-top ensures content doesn't hide behind fixed navbar
+ * Value: 60px (navbar ~56px + minimal 4px buffer) - tight alignment
+ */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* Minimal padding - just navbar clearance */
 }
 
 /* Enhanced Index Page Header Text Colors - Always White */

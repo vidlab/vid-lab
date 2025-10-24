@@ -1,10 +1,30 @@
-// Initializes floating navigation (keeps track of scroll and highlights active section)
+/**
+ * Initializes the floating navigation sidebar
+ * - Handles smooth scrolling when clicking navigation links
+ * - Automatically highlights the active section based on scroll position
+ * - Syncs navigation state with the visible content
+ * - Responsive: adjusts scroll offset based on screen size
+ */
 function initializeFloatingNav() {
   try {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#floating-nav .nav-link');
+    
+    /**
+     * Get responsive scroll offset based on screen width
+     * Minimal values - just navbar clearance without extra spacing
+     * @returns {number} The scroll offset in pixels
+     */
+    function getScrollOffset() {
+      if (window.innerWidth <= 768) {
+        return 130; // Mobile: navbar + mobile filter bar
+      } else if (window.innerWidth <= 992) {
+        return 80; // Tablet: optimized clearance
+      }
+      return 80; // Desktop: optimized clearance (navbar ~56px + buffer)
+    }
 
-    // Add click event listeners to desktop nav links
+    // Add click event listeners to desktop floating nav links
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -13,25 +33,44 @@ function initializeFloatingNav() {
       });
     });
 
+    /**
+     * Updates the active nav link based on which section is currently visible
+     * Checks if a section's top is within the viewport threshold
+     * Uses responsive offset that adapts to screen size
+     */
     function updateActive() {
+      const SCROLL_OFFSET = getScrollOffset();
       let current = null;
+      
       sections.forEach(sec => {
         const rect = sec.getBoundingClientRect();
-        if (rect.top <= 200 && rect.bottom > 200) { // Adjusted to match scroll offset
+        
+        // Get section-specific offset
+        let sectionOffset = SCROLL_OFFSET;
+        if (sec.id === 'graduate' || sec.id === 'collaborators' || sec.id === 'interns' || sec.id === 'undergraduate') {
+          // These sections have 10px less offset
+          sectionOffset = SCROLL_OFFSET - 10;
+        }
+        
+        // Check if section is visible within the responsive offset threshold
+        if (rect.top <= sectionOffset && rect.bottom > sectionOffset) {
           current = sec;
         }
       });
+      
+      // Update active state for the current visible section
       if (!current) return;
       navLinks.forEach(n => n.classList.remove('active'));
-      const act = document.querySelector(
+      const activeLink = document.querySelector(
         `#floating-nav .nav-link[href="#${current.id}"]`
       );
-      if (act) act.classList.add('active');
+      if (activeLink) activeLink.classList.add('active');
     }
 
+    // Listen for scroll and resize events to update active section
     window.addEventListener('scroll', updateActive, { passive: true });
-    window.addEventListener('resize', updateActive);
-    setTimeout(updateActive, 100);
+    window.addEventListener('resize', updateActive); // Re-calculate on screen resize
+    setTimeout(updateActive, 100); // Initial check after page load
   } catch (e) {
     console.error('Floating nav init error:', e);
   }
@@ -452,33 +491,127 @@ function initializeBibbaseHide() {
   }
 }
 
-// Mobile filter functionality for faculty/alumni/graduate/collaborators/interns/undergraduate sections
+/**
+ * Initializes mobile filter buttons for section navigation
+ * On mobile devices, shows a horizontal scrollable button bar
+ * Each button scrolls to its corresponding section when clicked
+ * Updates active state to highlight the currently selected section
+ * Also syncs with scroll position
+ */
 function initializeMobileSectionFilters() {
   const filterBtns = document.querySelectorAll('.mobile-filter-btn');
+  const sections = document.querySelectorAll('section[id]');
+  let isScrollingProgrammatically = false; // Flag to prevent conflicts
+  
+  // Handle button clicks
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function () {
+      // Set flag to prevent scroll listener from interfering
+      isScrollingProgrammatically = true;
+      
+      // Remove active state from all buttons
       filterBtns.forEach(b => b.classList.remove('active'));
+      
+      // Set active state on clicked button
       this.classList.add('active');
+      
+      // Get the section ID and scroll to it
       const filterValue = this.getAttribute('data-filter');
       scrollToSection(filterValue);
+      
+      // Re-enable scroll listener after scrolling completes
+      setTimeout(() => {
+        isScrollingProgrammatically = false;
+      }, 1000); // Wait for smooth scroll animation to complete
     });
   });
+  
+  /**
+   * Update active mobile button based on scroll position
+   * Syncs button highlight with visible section
+   */
+  function updateMobileActiveButton() {
+    if (window.innerWidth >= 768) return; // Only on mobile
+    if (isScrollingProgrammatically) return; // Don't update during programmatic scroll
+    
+    const scrollOffset = 130; // Mobile offset: navbar + mobile filter bar
+    let current = null;
+    
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      
+      // Get section-specific offset for mobile
+      let sectionOffset = scrollOffset;
+      if (sec.id === 'graduate' || sec.id === 'collaborators' || sec.id === 'interns' || sec.id === 'undergraduate') {
+        // These sections have 10px less offset (120px instead of 130px)
+        sectionOffset = scrollOffset - 10;
+      }
+      
+      if (rect.top <= sectionOffset && rect.bottom > sectionOffset) {
+        current = sec;
+      }
+    });
+    
+    if (!current) return;
+    
+    // Remove active from all buttons
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    
+    // Set active on corresponding button
+    const activeBtn = document.querySelector(
+      `.mobile-filter-btn[data-filter="${current.id}"]`
+    );
+    if (activeBtn) activeBtn.classList.add('active');
+  }
+  
+  // Update on scroll (only on mobile)
+  if (window.innerWidth < 768) {
+    window.addEventListener('scroll', updateMobileActiveButton, { passive: true });
+    setTimeout(updateMobileActiveButton, 100); // Initial check
+  }
 }
 
-// Helper to scroll to the selected section smoothly
+
+/**
+ * Smoothly scrolls to a specific section on the page
+ * @param {string} category - The ID of the section to scroll to
+ * 
+ * Calculates the proper scroll position by:
+ * 1. Getting the section's position relative to the viewport
+ * 2. Subtracting the header offset (responsive based on screen size)
+ * 3. Smoothly animating to the calculated position
+ * 
+ * Uses minimal offset - just enough to clear the navbar
+ * This maximizes visible content while keeping navigation accessible
+ */
 function scrollToSection(category) {
   const targetSection = document.getElementById(category);
   if (targetSection) {
-    const headerOffset = 200; // Increased offset for better clearance
+    // Minimal offset - just navbar clearance
+    let headerOffset = 80; // Default: navbar (~56px) + optimized buffer
+    
+    if (window.innerWidth <= 768) {
+      headerOffset = 130; // Mobile: navbar + mobile filter bar
+    } else if (window.innerWidth <= 992) {
+      headerOffset = 80; // Tablet: optimized clearance
+    }
+    
+    // Adjust offset for specific sections
+    if (category === 'graduate' || category === 'collaborators' || category === 'interns' || category === 'undergraduate') {
+      headerOffset -= 10; // These sections have 10px less offset
+    }
+    
     const elementPosition = targetSection.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
+    // Smooth scroll to the calculated position
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
     });
   }
 }
+
 
 // Initialize custom hamburger behavior for mobile nav
 function initializeCustomHamburger() {
