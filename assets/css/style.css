@@ -630,6 +630,15 @@ section[id] {
   width: 100% !important;
 }
 
+/* Undergraduate sections - Full width card body */
+#undergraduate .card-body {
+  width: 100% !important;
+}
+
+#alumni .card-body {
+  width: 100% !important;
+}
+
 #faculty .card-body a,
 .students-info-section a {
   color: var(--primary-color) !important;
