@@ -1,6 +1,24 @@
 [
   {
     "id": "news-1",
+    "title": "Chee Mei Ling (Irene)'s Paper Accepted at ASIG 2025",
+    "summary": "Congratulations to Chee Mei Ling (Irene), Thangarajah Akilan, and Aparna Ravinda Phalke for the acceptance of their paper to ASIG 2025.",
+    "image": "assets/images/news/news (4).png",
+    "date": "November 26, 2025",
+    "content": "<h5>Paper Acceptance at ASIG 2025</h5><p>Congratulations to <strong>Chee Mei Ling (Irene)</strong>, <strong>Thangarajah Akilan</strong>, and <strong>Aparna Ravinda Phalke</strong> for the acceptance of their paper titled <em>'Dual Atrous Separable Convolution for Improving Agricultural Semantic Segmentation'</em> to the <strong>3rd Asia Symposium on Image and Graphics (ASIG 2025)</strong>, to be held during November 28-30, 2025 in Osaka, Japan.</p><div class='news_footer text-center'><a href='https://asig.net/index.html' class='btn btn-light btn-custom'>Learn More About ASIG 2025</a></div>"
+  },
+  
+  {
+    "id": "news-2",
+    "title": "Gaeul Han's Paper Accepted at ASIG 2025",
+    "summary": "Congratulations to Gaeul Han, Thangarajah Akilan, and Arunya Prasantha Senadeera for the acceptance of their paper to ASIG 2025.",
+    "image": "assets/images/news/news (4).png",
+    "date": "November 26, 2025",
+    "content": "<h5>Paper Acceptance at ASIG 2025</h5><p>Congratulations to <strong>Gaeul Han</strong>, <strong>Thangarajah Akilan</strong>, and <strong>Arunya Prasantha Senadeera</strong> for the acceptance of their paper titled <em>'SEA-YOLO: Thermal Imaging Object Detection via Spatial Edge Attention for Low-visibility Autonomous Driving'</em> to the <strong>3rd Asia Symposium on Image and Graphics (ASIG 2025)</strong>, to be held during November 28-30, 2025 in Osaka, Japan.</p><div class='news_footer text-center'><a href='https://asig.net/index.html' class='btn btn-light btn-custom'>Learn More About ASIG 2025</a></div>"
+  },
+  
+  {
+    "id": "news-3",
     "title": "Congratulations to Our 2025 Graduates at Lakehead University Convocation",
     "summary": "VIDLab celebrates the academic achievements of Christopher Silver, Nusrat Jahan, Tharrengini Suresh, and Harish Sundaralingam who attended the Spring 2025 Convocation ceremony at Lakehead University.",
     "image": "assets/images/news/news (1).jpg",
@@ -9,7 +27,7 @@
   },
   
   {
-    "id": "news-2",
+    "id": "news-4",
     "title": "Dr. Akilan Selected as Invited Speaker at ICSIP 2025",
     "summary": "Dr. Akilan, Director of VIDLab, has been selected as an invited speaker at the International Conference on Signal and Image Processing (ICSIP) 2025.",
     "image": "assets/images/news/news (2).png",
@@ -18,7 +36,7 @@
   },
   
   {
-    "id": "news-3",
+    "id": "news-5",
     "title": "Christopher Silver's Research Published in Engineering Applications of Artificial Intelligence Journal",
     "summary": "Congratulations to Christopher Silver for the acceptance of his work on thermal imaging-based fall detection in a prestigious international journal.",
     "image": "assets/images/news/news (3).png",
