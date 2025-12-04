@@ -186,17 +186,33 @@
     </div>
   </section>
 
-  <!-- Recent News -->
+  <!-- Recent News Slider -->
   <section class="pb-5">
     <div class="mx-auto div_items_max_width">
       <div class="container featured_researches recent_news_card">
         <h2 class="fw-bold text-center mb-3">Recent News</h2>
         <p class="mb-3 text-center">Learn about our recent developments, published works, and research milestones that
           are shaping the future of intelligent systems.</p>
-        <div class="row g-4">
-          <!-- JS will inject news cards -->
+        
+        <!-- News Carousel -->
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner" id="newsCarouselInner">
+            <!-- JS will inject carousel slides -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-indicators" id="newsCarouselIndicators">
+            <!-- JS will inject indicators -->
+          </div>
         </div>
-        <div class="mt-3 text-center">
+
+        <div class="mt-4 text-center">
           <a href="news.html" class="btn btn-outline-secondary">View All News Articles</a>
         </div>
       </div>
