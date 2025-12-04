@@ -164,9 +164,70 @@ if (window.location.pathname.includes("news_details.html")) {
     .catch(err => {
       console.error("Error loading news details:", err);
       const container = document.getElementById("newsDetailsContainer");
-      if (container) {
-        container.innerHTML =
-          "<p class='text-center'>Error loading news details.</p>";
-      }
-    });
-}
+      if (isHomePage) {
+        // --- Homepage: Carousel slider with responsive cards per slide ---
+        const carouselInner = document.getElementById("newsCarouselInner");
+        const carouselIndicators = document.getElementById("newsCarouselIndicators");
+        if (!carouselInner || !carouselIndicators) return;
+
+        // Helper to decide how many cards per slide based on viewport breakpoint (bootstrap sm/md/lg)
+        function getCardsPerSlide() {
+          const w = window.innerWidth;
+          if (w < 576) return 1; // xs
+          if (w < 992) return 2; // sm/md
+          return 3; // lg and above
+        }
+
+        // Build the carousel slides for a given cardsPerSlide
+        function buildCarousel(cardsPerSlide, activeIndexToKeep = 0) {
+          carouselInner.innerHTML = "";
+          carouselIndicators.innerHTML = "";
+
+          const totalSlides = Math.ceil(sortedNews.length / cardsPerSlide);
+          for (let slideIndex = 0; slideIndex < totalSlides; slideIndex++) {
+            const startIdx = slideIndex * cardsPerSlide;
+            const slideNews = sortedNews.slice(startIdx, startIdx + cardsPerSlide);
+
+            let slideHTML = `\n            <div class="carousel-item ${slideIndex === 0 ? 'active' : ''}">\n              <div class="row g-4 justify-content-center">\n          `;
+
+            slideNews.forEach(article => {
+              slideHTML += `\n              <div class="col-md-4">\n                <div class="card card-hover h-100">\n                  <img src="${article.image}" class="card-img-top img-fluid" alt="${article.title}">\n                  <div class="card-body">\n                    <p class="recent_news_time">${article.date}</p>\n                    <h5 class="card-title">${article.title}</h5>\n                    <p class="card-text">${article.summary}</p>\n                    <a href="news_details.html?id=${article.id}" class="btn btn-outline-secondary">\n                      Read More\n                    </a>\n                  </div>\n                </div>\n              </div>\n            `;
+            });
+
+            slideHTML += `\n              </div>\n            </div>\n          `;
+            carouselInner.innerHTML += slideHTML;
+
+            // Add indicator for this slide
+            carouselIndicators.innerHTML += `\n            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="${slideIndex}" \n+              ${slideIndex === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Slide ${slideIndex + 1}"></button>\n          `;
+          }
+
+          // If we have a previously active index attempt to re-activate the same slide
+          try {
+            const carouselEl = document.querySelector('#newsCarousel');
+            const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+            const newIndex = Math.min(activeIndexToKeep, Math.max(0, Math.ceil(sortedNews.length / cardsPerSlide) - 1));
+            carouselInstance.to(newIndex);
+          } catch (err) {
+            // ignore if bootstrap not available or other errors
+          }
+        }
+
+        // Initial render
+        let currentCardsPerSlide = getCardsPerSlide();
+        buildCarousel(currentCardsPerSlide);
+
+        // Re-render on resize (debounced) to adapt to breakpoints
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+          const newCardsPerSlide = getCardsPerSlide();
+          if (newCardsPerSlide === currentCardsPerSlide) return; // nothing to do
+          clearTimeout(resizeTimer);
+          // Preserve active slide index when re-building
+          const activeSlide = document.querySelector('#newsCarousel .carousel-item.active');
+          const activeIndex = activeSlide ? Array.from(activeSlide.parentElement.children).indexOf(activeSlide) : 0;
+          resizeTimer = setTimeout(() => {
+            currentCardsPerSlide = newCardsPerSlide;
+            buildCarousel(currentCardsPerSlide, activeIndex);
+          }, 180);
+        });
+      } else {
