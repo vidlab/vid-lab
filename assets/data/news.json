@@ -1,6 +1,12 @@
 [
   {
     "id": "news-6",
+    "title": "VIDLab Luncheon with Guest Speaker Christopher Silver",
+    "summary": "On December 4, VIDLab hosted a luncheon featuring guest speaker Christopher Silver. Photos from the event are available in the gallery and below.",
+    "image": "assets/images/gallery/Irene's Defense.jpg",
+    "date": "December 4, 2025",
+    "content": "<h5>Lab Luncheon & Guest Talk</h5><p>On December 4, 2025, VIDLab hosted a luncheon with guest speaker <strong>Christopher Silver</strong>, who shared recent insights from his research and experiences. The event brought together faculty, students, and collaborators for an informal discussion and networking lunch.</p><p>Below are photos from the luncheon and related events:</p><div class='row g-3 my-4'><div class='col-md-6'><img src='assets/images/gallery/Luncehon (1).jpg' class='img-fluid rounded' alt='Luncheon 1' style='height: 350px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div><div class='col-md-6'><img src='assets/images/gallery/Luncehon (2).jpg' class='img-fluid rounded' alt='Luncheon 2' style='height: 350px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div></div><div class='row g-3 my-4'><div class='col-md-4'><img src=\"assets/images/gallery/Irene's Defense.jpg\" class='img-fluid rounded' alt='Irene Defense' style='height: 250px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div><div class='col-md-4'><img src=\"assets/images/gallery/Irene's Defense (2).jpg\" class='img-fluid rounded' alt='Irene Defense 2' style='height: 250px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div><div class='col-md-4'><img src=\"assets/images/gallery/Irene's Defense (3).jpg\" class='img-fluid rounded' alt='Irene Defense 3' style='height: 250px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div></div><div class='news_footer text-center'><a href='gallery.html' class='btn btn-light btn-custom'>View Full Gallery</a></div>"
+  },
   {
     "id": "news-1",
     "title": "Chee Mei Ling (Irene)'s Paper Accepted at ASIG 2025",
@@ -9,7 +15,6 @@
     "date": "November 26, 2025",
     "content": "<h5>Paper Acceptance at ASIG 2025</h5><p>Congratulations to <strong>Chee Mei Ling (Irene)</strong>, <strong>Thangarajah Akilan</strong>, and <strong>Aparna Ravinda Phalke</strong> for the acceptance of their paper titled <em>'Dual Atrous Separable Convolution for Improving Agricultural Semantic Segmentation'</em> to the <strong>3rd Asia Symposium on Image and Graphics (ASIG 2025)</strong>, to be held during November 28-30, 2025 in Osaka, Japan.</p><div class='news_footer text-center'><a href='https://asig.net/index.html' class='btn btn-light btn-custom'>Learn More About ASIG 2025</a></div>"
   },
-  
   {
     "id": "news-2",
     "title": "Gaeul Han's Paper Accepted at ASIG 2025",
