@@ -97,8 +97,37 @@
           <div class="research-card position-relative border">
             <div class="row g-0">
               <div class="col-md-5">
-                <img src="assets/images/research_projects/DAS-Conv.png" alt="Agricultural Segmentation"
-                  class="research-image">
+                <div style="display: flex; flex-direction: column; width: 100%; padding: 15px;">
+                  <!-- Poster Image -->
+                  <img src="assets/images/research_projects/DAS-Conv.png" alt="Agricultural Segmentation Poster"
+                    style="width: 100%; height: auto; object-fit: contain; margin-bottom: 20px; border-radius: 8px;">
+
+                  <!-- Video Preview Card -->
+                  <a href="https://www.researchtv.ca/gradflix-lakehead-university-graduate-student-research-1/videos/cling-das-conv-a-deep-learning-module-for-improving-semantic-segmentation-for-precision-agriculture"
+                    target="_blank" style="text-decoration: none; display: block; position: relative;">
+                    <div
+                      style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                      <img src="assets/images/research_projects/das_conv_video_thumbnail.png"
+                        alt="Research Video Thumbnail" style="width: 100%; height: auto; display: block;">
+                      <!-- Play Button Overlay -->
+                      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                                  background: rgba(255, 0, 0, 0.9); width: 68px; height: 48px; 
+                                  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+                                  transition: background 0.3s;">
+                        <div style="width: 0; height: 0; border-left: 20px solid white; 
+                                    border-top: 12px solid transparent; border-bottom: 12px solid transparent;
+                                    margin-left: 4px;">
+                        </div>
+                      </div>
+                    </div>
+                    <div style="margin-top: 8px; color: #030303; font-weight: 500;">
+                      🎥 DAS-Conv: Deep Learning for Precision Agriculture
+                    </div>
+                    <div style="margin-top: 4px; color: #606060; font-size: 0.9em;">
+                      Click to watch on ResearchTV
+                    </div>
+                  </a>
+                </div>
               </div>
               <div class="col-md-7">
                 <div class="research-content">
@@ -112,8 +141,6 @@
                     improves fine-grained spatial feature capture. Tested on the Agriculture-Vision dataset, the model
                     surpasses its baseline and performs comparably to transformer-based SOTA models, while offering over
                     66% better efficiency in the complexity-performance trade-off.
-                    <a href="https://www.researchtv.ca/gradflix-lakehead-university-graduate-student-research-1/videos/cling-das-conv-a-deep-learning-module-for-improving-semantic-segmentation-for-precision-agriculture"
-                      class="text-primary text-decoration-none">[Research Overview]</a>
                   </p>
 
                   <button type="button" class="read-more-btn btn btn-link p-0">Read More</button>
