@@ -10,7 +10,7 @@ function dedupeAndOrder(newsItems) {
       unique.push(n);
     }
   }
-  const desiredOrderIds = ["news-6", "news-1", "news-2"];
+  const desiredOrderIds = ["news-8", "news-7", "news-6", "news-1", "news-2"];
   const ordered = desiredOrderIds.map(id => unique.find(x => x.id === id)).filter(Boolean);
   const remaining = unique.filter(x => !desiredOrderIds.includes(x.id));
   return [...ordered, ...remaining];

@@ -1,5 +1,21 @@
 [
   {
+    "id": "news-8",
+    "title": "Dr. Thangarajah Akilan Appointed to ICDLT Committee",
+    "summary": "VIDLab is excited to share that Dr. Thangarajah Akilan has joined the ICDLT technical committee; ICDLT 2026 will be held July 17–19 in Kunming, China, with active calls for papers and participation.",
+    "image": "assets/images/news/icdlt.gif",
+    "date": "March 23, 2026",
+    "content": "<h5>VIDLab Spotlight at ICDLT</h5><p>We are proud to announce that the head of VIDLab, <strong>Dr. Thangarajah Akilan</strong>, has been appointed to the technical committee of the <strong>International Conference on Deep Learning Technologies (ICDLT)</strong>.</p><p>ICDLT 2026 (10th edition) will be held on <strong>July 17–19, 2026</strong> in <strong>Kunming, China</strong>, bringing together researchers, scholars, and scientists for face-to-face exchange on the latest deep learning technologies and applications.</p><p>The conference features multiple technical tracks, including deep learning models and algorithms, machine learning theory and technology, deep/machine learning applications, and responsible AI, security, and governance. This creates a strong platform for academic and industry collaboration.</p><p>Researchers and students are encouraged to participate. According to the conference site, key milestones include submission and review timelines, publication in conference proceedings, and open calls through the official CFP and submission portals.</p><p><a href='https://icdlt.org/cfp.html' target='_blank'>View Call for Papers</a> | <a href='https://icdlt.org/sub.html' target='_blank'>Submission Information</a></p><div class='news_footer text-center'><a href='https://icdlt.org/committee.html' target='_blank' class='btn btn-light btn-custom'>Explore ICDLT Committee & Conference</a></div>"
+  },
+  {
+    "id": "news-7",
+    "title": "Welcome and Congratulations to Kenneth Shahi & Kamran Yaghoubian",
+    "summary": "Join us in congratulating Kenneth Shahi and Kamran Yaghoubian on receiving the prestigious NSERC Undergraduate Student Research Award (USRA).",
+    "image": "assets/images/news/congrats.jpg",
+    "date": "March 23, 2026",
+    "content": "<h5>NSERC USRA Awardees</h5><p>We are delighted to congratulate <strong>Kenneth Shahi</strong> and <strong>Kamran Yaghoubian</strong> for being awarded the highly competitive and prestigious <strong>NSERC Undergraduate Student Research Award (USRA)</strong>. This achievement highlights their academic excellence and strong research potential.</p><p>The NSERC USRA is designed to nurture the research careers of bright, promising undergraduate students by providing them with research work experience in an academic setting. Their dedication and hard work have truly paid off.</p><p>Congratulations, Kenneth and Kamran! We look forward to your continued success and ongoing research contributions at VIDLab. Thank you to everyone who supported them throughout their academic journey!</p><div class='news_footer text-center'><a href='people.html' class='btn btn-light btn-custom'>View Our Interns</a></div>"
+  },
+  {
     "id": "news-6",
     "title": "Chee Mei Ling (Irene)'s Defense and Luncheon",
     "summary": "On December 4, VIDLab hosted a luncheon featuring guest speaker Christopher Silver. Photos from the event are available in the gallery and below.",
