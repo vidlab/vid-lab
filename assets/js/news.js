@@ -10,10 +10,21 @@ function dedupeAndOrder(newsItems) {
       unique.push(n);
     }
   }
-  const desiredOrderIds = ["news-8", "news-7", "news-6", "news-1", "news-2"];
-  const ordered = desiredOrderIds.map(id => unique.find(x => x.id === id)).filter(Boolean);
-  const remaining = unique.filter(x => !desiredOrderIds.includes(x.id));
-  return [...ordered, ...remaining];
+
+  const withIndex = unique.map((item, index) => ({ item, index }));
+  withIndex.sort((a, b) => {
+    const aTime = Date.parse(a.item.date);
+    const bTime = Date.parse(b.item.date);
+    const aValid = Number.isFinite(aTime);
+    const bValid = Number.isFinite(bTime);
+
+    if (aValid && bValid) return bTime - aTime;
+    if (aValid) return -1;
+    if (bValid) return 1;
+    return a.index - b.index;
+  });
+
+  return withIndex.map(entry => entry.item);
 }
 
 // Homepage carousel rendering
