@@ -27,6 +27,35 @@ function dedupeAndOrder(newsItems) {
   return withIndex.map(entry => entry.item);
 }
 
+function renderNewsCard(article) {
+  return `
+    <div class="card card-hover h-100 news-card" role="link" tabindex="0" data-href="news_details.html?id=${article.id}">
+      <img src="${article.image}" class="card-img-top img-fluid" alt="${article.title}">
+      <div class="card-body">
+        <p class="recent_news_time">${article.date}</p>
+        <h5 class="card-title">${article.title}</h5>
+        <p class="card-text">${article.summary}</p>
+        <span class="btn btn-outline-secondary">Read More</span>
+      </div>
+    </div>`;
+}
+
+function wireNewsCardLinks(root = document) {
+  root.querySelectorAll('.news-card').forEach(card => {
+    const target = card.dataset.href;
+    if (!target) return;
+    card.addEventListener('click', () => {
+      window.location.href = target;
+    });
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        window.location.href = target;
+      }
+    });
+  });
+}
+
 // Homepage carousel rendering
 function renderHomeCarousel(sortedNews) {
   const carouselInner = document.getElementById("newsCarouselInner");
@@ -52,15 +81,7 @@ function renderHomeCarousel(sortedNews) {
       group.forEach(a => {
         html += `
     <div class="col-md-4">
-      <div class="card card-hover h-100">
-        <img src="${a.image}" class="card-img-top img-fluid" alt="${a.title}">
-        <div class="card-body">
-          <p class="recent_news_time">${a.date}</p>
-          <h5 class="card-title">${a.title}</h5>
-          <p class="card-text">${a.summary}</p>
-          <a href="news_details.html?id=${a.id}" class="btn btn-outline-secondary">Read More</a>
-        </div>
-      </div>
+      ${renderNewsCard(a)}
     </div>`;
       });
       html += `
@@ -74,6 +95,8 @@ function renderHomeCarousel(sortedNews) {
       const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carouselEl);
       carouselInstance.to(activeIndex);
     } catch (e) {}
+
+    wireNewsCardLinks(carouselInner);
   }
 
   let cardsPerSlide = getCardsPerSlide();
@@ -100,17 +123,10 @@ function renderNewsGrid(sortedNews) {
   sortedNews.forEach(article => {
     newsContainer.innerHTML += `
 <div class="col-md-4">
-  <div class="card card-hover h-100">
-    <img src="${article.image}" class="card-img-top img-fluid" alt="${article.title}">
-    <div class="card-body">
-      <p class="recent_news_time">${article.date}</p>
-      <h5 class="card-title">${article.title}</h5>
-      <p class="card-text">${article.summary}</p>
-      <a href="news_details.html?id=${article.id}" class="btn btn-outline-secondary">Read More</a>
-    </div>
-  </div>
+  ${renderNewsCard(article)}
 </div>`;
   });
+  wireNewsCardLinks(newsContainer);
 }
 
 // Initialize listing (homepage or news page)
