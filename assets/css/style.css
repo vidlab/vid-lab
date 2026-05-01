@@ -1308,6 +1308,12 @@ footer small {
   color: var(--bg-light) !important;
 }
 
+footer .footer-credit {
+  margin: 6px 0 0;
+  font-size: 0.75rem;
+  color: rgba(241, 245, 249, 0.75) !important;
+}
+
 footer hr {
   margin: 8px;
 }
