@@ -2150,6 +2150,9 @@ section h2::after {
 }
 
 .recent_news_card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
   transition: all 0.3s ease;
 }
 
