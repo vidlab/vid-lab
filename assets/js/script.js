@@ -464,6 +464,69 @@ function initializeReadMoreToggle() {
   });
 }
 
+// Build the Featured Research carousel on the homepage
+function initializeFeaturedResearchCarousel() {
+  const carouselInner = document.getElementById('featuredResearchCarouselInner');
+  const carouselIndicators = document.getElementById('featuredResearchCarouselIndicators');
+  const source = document.getElementById('featuredResearchItems');
+  if (!carouselInner || !carouselIndicators || !source) return;
+
+  const cards = Array.from(source.querySelectorAll('.featured-research-item'));
+  if (cards.length === 0) return;
+
+  function getCardsPerSlide() {
+    const w = window.innerWidth;
+    if (w < 576) return 1;
+    if (w < 992) return 2;
+    return 3;
+  }
+
+  function buildCarousel(cardsPerSlide, activeIndex = 0) {
+    carouselInner.innerHTML = '';
+    carouselIndicators.innerHTML = '';
+
+    const totalSlides = Math.ceil(cards.length / cardsPerSlide);
+    for (let i = 0; i < totalSlides; i++) {
+      const start = i * cardsPerSlide;
+      const group = cards.slice(start, start + cardsPerSlide);
+      let html = `<div class="carousel-item ${i === 0 ? 'active' : ''}">
+  <div class="row g-4 justify-content-center">`;
+      group.forEach(card => {
+        html += `
+    <div class="col-md-4">
+      ${card.innerHTML}
+    </div>`;
+      });
+      html += `
+  </div>
+</div>`;
+      carouselInner.innerHTML += html;
+      carouselIndicators.innerHTML += `<button type="button" data-bs-target="#featuredResearchCarousel" data-bs-slide-to="${i}" ${i === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>`;
+    }
+
+    try {
+      const carouselEl = document.querySelector('#featuredResearchCarousel');
+      const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+      carouselInstance.to(activeIndex);
+    } catch (e) {}
+  }
+
+  let cardsPerSlide = getCardsPerSlide();
+  buildCarousel(cardsPerSlide);
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    const newCardsPerSlide = getCardsPerSlide();
+    if (newCardsPerSlide === cardsPerSlide) return;
+    clearTimeout(resizeTimer);
+    const activeSlide = document.querySelector('#featuredResearchCarousel .carousel-item.active');
+    const activeIdx = activeSlide ? Array.from(activeSlide.parentElement.children).indexOf(activeSlide) : 0;
+    resizeTimer = setTimeout(() => {
+      cardsPerSlide = newCardsPerSlide;
+      buildCarousel(cardsPerSlide, activeIdx);
+    }, 180);
+  });
+}
+
 // Highlight active nav link based on current page
 function initializeActiveNavLink() {
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -682,6 +745,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeGalleryFilters();
   initializeNavbarOutsideClick();
   initializeReadMoreToggle();
+  initializeFeaturedResearchCarousel();
   initializeActiveNavLink();
   initializeBibbaseHide();
   initializeMobileSectionFilters();
