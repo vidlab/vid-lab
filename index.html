@@ -123,8 +123,19 @@
         <h2 class="fw-bold mb-3">Featured Research</h2>
         <p class="mb-3">Discover our latest breakthroughs and ongoing research projects that are making a difference.
         </p>
-        <div class="row g-4">
-          <div class="col-md-4">
+        <div id="featuredResearchItems" class="d-none">
+          <div class="featured-research-item">
+            <div class="card card-hover h-100"
+              onclick="location.href='assets/images/research_projects/crv_popster__Copy.pdf';">
+              <img src="assets/images/research_projects/crv_popster__Copy.png" class="card-img-top"
+                alt="Featured Research CRV Poster">
+              <div class="card-body">
+                <h5 class="card-title">CRV Poster</h5>
+                <p class="card-text">CANAI-CRV Poster Presentation and Research Highlights</p>
+              </div>
+            </div>
+          </div>
+          <div class="featured-research-item">
             <div class="card card-hover h-100"
               onclick="location.href='https://ieeexplore.ieee.org/abstract/document/10270859';">
               <img
@@ -136,7 +147,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="featured-research-item">
             <div class="card card-hover h-100"
               onclick="location.href='https://ieeexplore.ieee.org/abstract/document/10292460';">
               <img src="assets/images/research_projects/fake_news_poster.png" class="card-img-top"
@@ -147,7 +158,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="featured-research-item">
             <div class="card card-hover h-100"
               onclick="location.href='https://ieeexplore.ieee.org/abstract/document/10667187';">
               <img
@@ -159,6 +170,25 @@
                   Activation</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div id="featuredResearchCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner" id="featuredResearchCarouselInner">
+            <!-- JS will inject carousel slides -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#featuredResearchCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#featuredResearchCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-indicators" id="featuredResearchCarouselIndicators">
+            <!-- JS will inject indicators -->
           </div>
         </div>
         <div class="mt-3">
