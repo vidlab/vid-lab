@@ -416,6 +416,11 @@ body {
   padding: var(--spacing-sm);
 }
 
+.featured_researches .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
 .btn-outline-secondary {
   color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
@@ -722,9 +727,77 @@ section[id] {
   opacity: 1;
 }
 
+/*──────────────────────────────────────────────────────────────────────────────
+  FEATURED RESEARCH CAROUSEL (Homepage)
+──────────────────────────────────────────────────────────────────────────────*/
+#featuredResearchCarousel {
+  position: relative;
+  padding: 0 50px;
+}
+
+#featuredResearchCarousel .carousel-item {
+  padding: 10px 0;
+}
+
+#featuredResearchCarousel .carousel-control-prev,
+#featuredResearchCarousel .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+}
+
+#featuredResearchCarousel .carousel-control-prev {
+  left: 0;
+}
+
+#featuredResearchCarousel .carousel-control-next {
+  right: 0;
+}
+
+#featuredResearchCarousel .carousel-control-prev:hover,
+#featuredResearchCarousel .carousel-control-next:hover {
+  opacity: 1;
+  background-color: var(--primary-dark);
+}
+
+#featuredResearchCarousel .carousel-control-prev-icon,
+#featuredResearchCarousel .carousel-control-next-icon {
+  width: 16px;
+  height: 16px;
+}
+
+#featuredResearchCarousel .carousel-indicators {
+  position: relative;
+  bottom: -10px;
+  margin-top: 20px;
+}
+
+#featuredResearchCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-secondary);
+  border: none;
+  margin: 0 5px;
+  opacity: 0.5;
+}
+
+#featuredResearchCarousel .carousel-indicators button.active {
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+
 /* Mobile adjustments for carousel */
 @media (max-width: 768px) {
   #newsCarousel {
+    padding: 0 30px;
+  }
+
+  #featuredResearchCarousel {
     padding: 0 30px;
   }
   
