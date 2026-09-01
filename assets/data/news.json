@@ -1,4 +1,12 @@
 [{
+    "id": "news-16",
+    "title": "Congratulations to Jimmy Tsang on Successfully Defending His Thesis",
+    "summary": "Jimmy Tsang successfully defended his thesis, 'Smart Grid Power Forecasting: An Investigation Into Graph Attention-Enhanced Temporal Fusion Transformer for Short Term Load Forecasting,' on September 1, 2026.",
+    "image": "assets/images/Thesis_defence/jimmy/1.jpeg",
+    "date": "September 1, 2026",
+    "content": "<h5>Thesis Defense Success!</h5><p>Congratulations to <strong>Jimmy Tsang</strong> on the successful defense of his thesis, <em>'Smart Grid Power Forecasting: An Investigation Into Graph Attention-Enhanced Temporal Fusion Transformer for Short Term Load Forecasting,'</em> held on Tuesday, September 1, 2026.</p><p>The defense was supervised by <strong>Dr. Thangarajah Akilan</strong> </p><p>Jimmy's thesis proposes a novel approach integrating a Temporal Fusion Transformer (TFT) with a Graph Attention Network (GAT) to improve short-term load forecasting for smart grids, capturing cross-feature relationships that traditional TFT models miss. Trained and evaluated on the IESO, ENTSOE, AEP, and ELIA datasets, the model achieved state-of-the-art or near state-of-the-art performance, including a MAPE of 2.92% and 2.18% on Ontario and market demand forecasting, respectively.</p><div class='row g-3 my-4'><div class='col-md-6'><img src='assets/images/Thesis_defence/jimmy/1.jpeg' class='img-fluid rounded' alt='Jimmy Tsang thesis defense' style='height: 320px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div><div class='col-md-6'><img src='assets/images/Thesis_defence/jimmy/2.jpeg' class='img-fluid rounded' alt='Jimmy Tsang thesis defense' style='height: 320px; width: 100%; object-fit: cover; background-color: #f8f9fa;'></div></div><p class='mt-4'><strong>Well done, Jimmy!</strong> We look forward to seeing the continued impact of your research on smart grid forecasting.</p><div class='news_footer text-center'><a href='gallery.html' class='btn btn-light btn-custom'>View Full Gallery</a></div>"
+  },
+  {
     "id": "news-15",
     "title": "Congratulations to Kenneth Shahi and Joiebdeep Singh on Completing Their NSERC USRA Projects",
     "summary": "Kenneth Shahi and Joiebdeep Singh successfully completed their NSERC Undergraduate Student Research Award projects and presented their findings at VIDLab on August 13, 2026.",
