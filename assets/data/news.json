@@ -1,4 +1,12 @@
 [{
+    "id": "news-17",
+    "title": "ASIG 2026 & MLPR 2026 - Call for Papers",
+    "summary": "The 4th Asia Symposium on Image and Graphics (ASIG 2026), hosted by Ritsumeikan University, will be held December 4-6, 2026 in Kyoto, Japan, together with its workshop MLPR 2026. Submission deadline: September 30, 2026.",
+    "image": "assets/images/news/ASIG 2026.png",
+    "date": "September 8, 2026",
+    "content": "<h5>4th Asia Symposium on Image and Graphics (ASIG 2026)</h5><p>We are pleased to share details of the <strong>4th Asia Symposium on Image and Graphics (ASIG 2026)</strong>, hosted by Ritsumeikan University, Japan, to be held <strong>December 4-6, 2026 in Kyoto, Japan</strong>.</p><p>Held together with ASIG 2026 is its workshop, the <strong>4th International Conference on Machine Learning and Pattern Recognition (MLPR 2026)</strong>.</p><p><strong>Submission Deadline:</strong> September 30, 2026</p><p>For more details, see the announcements shared on LinkedIn:</p><ul><li><a href='https://lnkd.in/p/g4i2QsFg' target='_blank'>ASIG 2026 Announcement</a></li><li><a href='https://www.linkedin.com/posts/%E8%89%BE%E5%98%89-%E5%BC%A0-2ba5b6409_call-for-papers-mlpr-2026-kyoto-japan-share-7496214676007976960-At5V/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9gCVcBz3ddYgTlZj3WpjtpNT4PKbC9-IM' target='_blank'>MLPR 2026 Announcement</a></li></ul><div class='news_footer text-center'><a href='https://www.asig.net/' target='_blank' class='btn btn-light btn-custom'>Visit ASIG 2026</a></div>"
+  },
+  {
     "id": "news-16",
     "title": "Congratulations to Jimmy Tsang on Successfully Defending His Thesis",
     "summary": "Jimmy Tsang successfully defended his thesis, 'Smart Grid Power Forecasting: An Investigation Into Graph Attention-Enhanced Temporal Fusion Transformer for Short Term Load Forecasting,' on September 1, 2026.",
