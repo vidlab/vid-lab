@@ -1,4 +1,12 @@
-[{
+[{ 
+    "id": "news-20",
+    "title": "Virtual Workshop: Building a Message Routing AI Agent",
+    "summary": "VIDLab and the Faculty of Engineering invite students and researchers to a free virtual workshop on building a message-routing AI agent with Google Colab on September 18, 2026.",
+    "image": "assets/images/workshop/unnamed.png",
+    "date": "September 18, 2026",
+    "content": "<h5>Building a Message Routing AI Agent</h5><p>VIDLab and the <strong>Faculty of Engineering</strong> are pleased to invite students and researchers from all disciplines to a free virtual workshop on agentic artificial intelligence.</p><p><strong>Date:</strong> Friday, September 18, 2026<br><strong>Time:</strong> 2:30 p.m.<br><strong>Format:</strong> Virtual workshop</p><p>This hands-on session provides an introduction to agentic AI systems and explores how modern Large Language Models (LLMs) can be extended into AI agents capable of perception, reasoning, and action. Participants will learn the fundamentals of agent design and build a fully functional message-routing agent using Google Colab, a free browser-based programming platform.</p><p>The workshop is beginner-friendly, requires no coding background, and also offers useful depth for participants with technical experience. It is open to anyone interested in Agentic AI and related topics.</p><p>The presenter is <strong>Andre Ziteng Zhang</strong>, a Process Intelligence Engineer and AI Developer on RBC's AI Strategy and Solution Team. He holds a Master of Science in Electrical and Computer Engineering from Lakehead University, and his work focuses on agentic AI systems, workflow automation, and enterprise-grade LLM applications and governance.</p><div class='news_footer text-center'><a href='https://lakeheadu.zoom.us/meeting/register/ouVh6C1CQ9KO1rXzMGvuxw#/registration' target='_blank' rel='noopener' class='btn btn-light btn-custom'>Register for the Free Workshop</a></div><p class='text-center text-muted small mt-4'><em>After registering, you will receive a confirmation email with information about joining the meeting.</em></p>"
+  },
+  {
     "id": "news-19",
     "title": "Congratulations to Russell Frost on Successfully Defending His Thesis",
     "summary": "Congratulations to Russell Frost on successfully defending his thesis, 'Automatic Chord Estimation.'",
