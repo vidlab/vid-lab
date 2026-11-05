@@ -737,8 +737,50 @@ function initializePageShowReload() {
   });
 }
 
+// Adds a "scrolled" class to the navbar once the page is scrolled (tighter, more opaque bar)
+function initializeNavbarScrollState() {
+  const nav = document.querySelector('.navbar');
+  if (!nav) return;
+  const update = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+// Fades sections/cards in as they scroll into view. Content is only hidden once JS
+// has confirmed IntersectionObserver works, and never for reduced-motion users.
+function initializeScrollReveal() {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll(
+    '.section-head, .area-card, .about-section .col-lg-7, .faculty-stack, ' +
+    '.featured_researches, .students-info-section > h2, .research-card, #faculty .card'
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach((el, i) => {
+    // Skip anything already on screen so the first view never flashes
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    el.classList.add('reveal');
+    if (el.classList.contains('area-card')) {
+      el.style.transitionDelay = `${(i % 3) * 80}ms`;
+    }
+    observer.observe(el);
+  });
+}
+
 // Main initialization
 document.addEventListener('DOMContentLoaded', () => {
+  initializeNavbarScrollState();
+  initializeScrollReveal();
   initializeFloatingNav();
   initializeFilters();
   initializeGalleryModals();

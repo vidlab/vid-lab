@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261105b">
 </head>
 
 <body class="zoom-bg">
@@ -73,51 +73,103 @@
 
   <!-- Home Section -->
   <section id="home">
-    <div class="container text-center">
-      <h1>Vision Intelligence and Data Lab</h1>
+    <div class="container hero-inner">
+      <div class="row align-items-center g-5">
 
-      <!-- Desktop/full version -->
-      <div class="theme-box d-none d-md-block">
-        <h5><strong>The following are some of the ongoing research themes:</strong></h5>
-        <ul class="list-unstyled">
-          <li>• Lidar point cloud analysis for object detection and tracking.</li>
-          <li>• Image/video semantic segmentation for intelligent transportation, healthcare and medical diagnosis, and precision agriculture.</li>
-          <li>• Coded caching and distributed computing, network security.</li>
-          <li>• Brain-computer interfaces and privacy.</li>
-        </ul>
-      </div>
+        <!-- Left on desktop (first on mobile): lab intro -->
+        <div class="col-lg-6 order-1 hero-copy">
+          <span class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> Lakehead University &middot; Thunder Bay, Ontario</span>
+          <h1>Vision Intelligence <span class="hero-accent">&amp; Data Lab</span></h1>
+          <p class="hero-lead">Building efficient, intelligent solutions to real-world problems with computer vision,
+            deep learning, and large-scale data analytics.</p>
 
-      <!-- Mobile/condensed version -->
-      <div class="theme-box d-block d-md-none">
-        <h5><strong>Ongoing Research Themes:</strong></h5>
-        <ul class="list-unstyled">
-          <li>&bull; Human pose estimation for activity analysis.</li>
-          <li>&bull; Image/video semantic segmentation in transportation, healthcare, and agriculture.</li>
-          <li>&bull; Coded caching and distributed computing, network security.</li>
-          <li>&bull; Brain-computer interfaces and privacy.</li>
-        </ul>
-      </div>
+          <p class="hero-themes-label">Ongoing research themes</p>
+          <ul class="hero-themes list-unstyled">
+            <li><i class="fa-solid fa-cube"></i> LiDAR point clouds for detection &amp; tracking</li>
+            <li><i class="fa-solid fa-layer-group"></i> Image &amp; video semantic segmentation</li>
+            <li><i class="fa-solid fa-network-wired"></i> Coded caching &amp; network security</li>
+            <li><i class="fa-solid fa-brain"></i> Brain&ndash;computer interfaces &amp; privacy</li>
+          </ul>
 
-      <div class="d-flex justify-content-center flex-nowrap">
-        <a href="researchs.html" class="btn btn-light btn-custom">Explore Our Research Projects</a>
-        <a href="publications.html" class="btn btn-light btn-custom">View Publications</a>
+          <div class="hero-actions">
+            <a href="researchs.html" class="btn btn-hero-primary">Explore Our Research <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            <a href="publications.html" class="btn btn-hero-ghost">View Publications</a>
+          </div>
+        </div>
+
+        <!-- Right on desktop: research areas -->
+        <div class="col-lg-6 order-2">
+          <div class="hero-areas-panel">
+            <p class="hero-areas-label"><i class="fa-solid fa-microscope"></i> Research Areas</p>
+            <div class="hero-areas">
+            <div class="hero-area">
+              <div class="hero-area-icon"><i class="fa-solid fa-eye"></i></div>
+              <div><h6>Computer Vision</h6><span>Detection, tracking &amp; scene understanding</span></div>
+            </div>
+            <div class="hero-area">
+              <div class="hero-area-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <div><h6>Deep &amp; Machine Learning</h6><span>Efficient architectures &amp; distillation</span></div>
+            </div>
+            <div class="hero-area">
+              <div class="hero-area-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div><h6>Medical Imaging</h6><span>MRI/PET analysis &amp; tumor segmentation</span></div>
+            </div>
+            <div class="hero-area">
+              <div class="hero-area-icon"><i class="fa-solid fa-road"></i></div>
+              <div><h6>Intelligent Transportation</h6><span>Crack detection &amp; smart infrastructure</span></div>
+            </div>
+            <div class="hero-area">
+              <div class="hero-area-icon"><i class="fa-solid fa-seedling"></i></div>
+              <div><h6>Precision Agriculture</h6><span>Crop &amp; field segmentation</span></div>
+            </div>
+            <div class="hero-area">
+              <div class="hero-area-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div><h6>Networks &amp; Security</h6><span>Coded caching, computing &amp; privacy</span></div>
+            </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Vision Section -->
-  <section class="py-5">
-    <div class="container lab-director div_items_max_width">
-      <h2 class="fw-bold">Vision</h2>
-      <div class="p-4 rounded border bg-white shadow-hover">
-        <p>Vision Intelligence and Data Laboratory (VIDLab) at Lakehead University focuses on the research and development of efficient intelligent solutions for practical problems using computer vision, image processing, deep learning, machine learning, large data analytics and advanced optimization techniques.</p>
-        <p>The lab is led by a team of three accomplished faculty members: Dr. Akilan, T., Dr. Deng, Y., and Dr. Bajwa, G. Together, they combine their complementary expertise in image/video processing and object detection, network optimization and coded caching, and machine learning with data-driven solutions to drive innovative research across multiple application domains including intelligent transportation, healthcare, medical diagnosis, and precision agriculture.</p>
+  <!-- Light-blue card holding all homepage content below the hero -->
+  <div class="home-content-card">
+
+  <!-- About / Vision Section -->
+  <section class="about-section">
+    <div class="container div_items_max_width">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7">
+          <span class="section-kicker">Our vision</span>
+          <h2 class="fw-bold about-title">Practical intelligence, grounded in research</h2>
+          <p>Vision Intelligence and Data Laboratory (VIDLab) at Lakehead University focuses on the research and development of efficient intelligent solutions for practical problems using computer vision, image processing, deep learning, machine learning, large data analytics and advanced optimization techniques.</p>
+          <p>The lab is led by a team of three accomplished faculty members: Dr. Akilan, T., Dr. Deng, Y., and Dr. Bajwa, G. Together, they combine their complementary expertise in image/video processing and object detection, network optimization and coded caching, and machine learning with data-driven solutions to drive innovative research across multiple application domains including intelligent transportation, healthcare, medical diagnosis, and precision agriculture.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="faculty-stack">
+            <a href="faculty.html" class="faculty-mini">
+              <span class="avatar" style="--zoom:1.5;--focus:45% 38%"><img src="assets/images/team/akilan_thumb.jpg" alt="Dr. Akilan, T."></span>
+              <div><strong>Dr. Akilan, T.</strong><span>Image/video processing &amp; object detection</span></div>
+            </a>
+            <a href="faculty.html" class="faculty-mini">
+              <span class="avatar" style="--zoom:1.45;--focus:46% 38%"><img src="assets/images/team/deng_thumb.jpg" alt="Dr. Yong Deng"></span>
+              <div><strong>Dr. Deng, Y.</strong><span>Network optimization &amp; coded caching</span></div>
+            </a>
+            <a href="faculty.html" class="faculty-mini">
+              <span class="avatar" style="--zoom:1.12;--focus:50% 40%"><img src="assets/images/team/bajwa_thumb.jpg" alt="Dr. Garima Bajwa"></span>
+              <div><strong>Dr. Bajwa, G.</strong><span>Machine learning &amp; data-driven solutions</span></div>
+            </a>
+            <a href="faculty.html" class="faculty-more">Meet the full team <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Featured Research Section -->
-  <section class="pb-5">
+  <section class="pb-5 pt-5 featured-section">
     <div class="mx-auto div_items_max_width">
       <div class="container text-center featured_researches">
         <h2 class="fw-bold mb-3">Featured Research</h2>
@@ -285,6 +337,9 @@
     </div>
   </section>
 
+  </div>
+  <!-- /home-content-card -->
+
   <div class="modal fade" id="newsModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -340,13 +395,13 @@
       <hr class="border-secondary">
       <!-- Desktop/tablet footer: visible from md and up -->
       <div class="text-center pb-3 d-none d-md-block">
-        <small>© 2025 Vision Intelligence and Data Lab. All rights reserved.</small>
+        <small>© 2026 Vision Intelligence and Data Lab. All rights reserved.</small>
         <p class="footer-credit">This website is maintained by Chee Mei Ling (2024–2025), Fahim Ur Rahman (2025–2026), and Thenukan P (2026–2027).</p>
       </div>
 
       <!-- Mobile-only footer: visible below md -->
       <div class="text-center pb-3 d-block d-md-none">
-        <small>© 2025 VIDLab. All rights reserved.</small>
+        <small>© 2026 VIDLab. All rights reserved.</small>
         <p class="footer-credit">This website is maintained by Chee Mei Ling (2024–2025), Fahim Ur Rahman (2025–2026), and Thenukan P (2026–2027).</p>
       </div>
     </div>
@@ -355,7 +410,7 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/news.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=20261105"></script>
 
 </body>
 
